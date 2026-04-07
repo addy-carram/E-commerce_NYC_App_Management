@@ -65,9 +65,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label25 = new System.Windows.Forms.Label();
@@ -478,17 +475,14 @@
             // 
             // tableLayoutPanel7
             // 
-            this.tableLayoutPanel7.ColumnCount = 10;
+            this.tableLayoutPanel7.ColumnCount = 7;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 246F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 201F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 437F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 280F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel7.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.label10, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.label11, 2, 0);
@@ -496,9 +490,6 @@
             this.tableLayoutPanel7.Controls.Add(this.label13, 4, 0);
             this.tableLayoutPanel7.Controls.Add(this.label14, 5, 0);
             this.tableLayoutPanel7.Controls.Add(this.label15, 6, 0);
-            this.tableLayoutPanel7.Controls.Add(this.label16, 7, 0);
-            this.tableLayoutPanel7.Controls.Add(this.label17, 8, 0);
-            this.tableLayoutPanel7.Controls.Add(this.label18, 9, 0);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 166);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
@@ -512,90 +503,63 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 25);
+            this.label9.Size = new System.Drawing.Size(91, 48);
             this.label9.TabIndex = 0;
-            this.label9.Text = "id-order";
+            this.label9.Text = "id-product";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(100, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 25);
+            this.label10.Size = new System.Drawing.Size(97, 25);
             this.label10.TabIndex = 1;
-            this.label10.Text = "id-patient";
+            this.label10.Text = "producer";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(210, 0);
+            this.label11.Location = new System.Drawing.Point(251, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(108, 25);
+            this.label11.Size = new System.Drawing.Size(130, 25);
             this.label11.TabIndex = 2;
-            this.label11.Text = "id-product";
+            this.label11.Text = "model-name";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(333, 0);
+            this.label12.Location = new System.Drawing.Point(688, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(129, 25);
+            this.label12.Size = new System.Drawing.Size(156, 25);
             this.label12.TabIndex = 3;
-            this.label12.Text = "id-employee";
+            this.label12.Text = "id-product-type";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(526, 0);
+            this.label13.Location = new System.Drawing.Point(968, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(111, 25);
+            this.label13.Size = new System.Drawing.Size(107, 25);
             this.label13.TabIndex = 4;
-            this.label13.Text = "order-date";
+            this.label13.Text = "total-price";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(772, 0);
+            this.label14.Location = new System.Drawing.Point(1119, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 25);
+            this.label14.Size = new System.Drawing.Size(146, 25);
             this.label14.TabIndex = 5;
-            this.label14.Text = "notes";
+            this.label14.Text = "stock-quantity";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(876, 0);
+            this.label15.Location = new System.Drawing.Point(1278, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(140, 25);
+            this.label15.Size = new System.Drawing.Size(92, 25);
             this.label15.TabIndex = 6;
-            this.label15.Text = "id-order-state";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(1077, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(131, 25);
-            this.label16.TabIndex = 7;
-            this.label16.Text = "total-amount";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(1217, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(112, 25);
-            this.label17.TabIndex = 8;
-            this.label17.Text = "pay-status";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(1348, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(101, 48);
-            this.label18.TabIndex = 9;
-            this.label18.Text = "pay-methond";
+            this.label15.Text = "is-active";
             // 
             // tableLayoutPanel6
             // 
@@ -839,9 +803,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Label label25;

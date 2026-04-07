@@ -36,9 +36,10 @@
             this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Power Grotesk Trial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(63, 24);
+            this.button1.Location = new System.Drawing.Point(154, 49);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 42);
+            this.button1.Size = new System.Drawing.Size(216, 81);
             this.button1.TabIndex = 0;
             this.button1.Text = "Enter Account";
             this.button1.UseVisualStyleBackColor = false;
@@ -46,11 +47,12 @@
             // 
             // UserControl1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(248, 134);
+            this.Size = new System.Drawing.Size(496, 258);
             this.ResumeLayout(false);
 
         }

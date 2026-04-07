@@ -18,3 +18,4 @@ D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Patient.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Orders.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Form2.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.log2.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Form3.resources
