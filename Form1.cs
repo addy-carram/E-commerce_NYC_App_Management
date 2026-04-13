@@ -129,5 +129,10 @@ namespace e_commerce_NYC
             panel5.Visible = false;
             panel6.Visible = false;
         }
+
+        private void label71_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
