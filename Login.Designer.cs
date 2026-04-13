@@ -197,9 +197,9 @@
             // 
             this.userControl11.AutoSize = true;
             this.userControl11.Location = new System.Drawing.Point(79, 577);
-            this.userControl11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.userControl11.Margin = new System.Windows.Forms.Padding(2);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(348, 178);
+            this.userControl11.Size = new System.Drawing.Size(908, 316);
             this.userControl11.TabIndex = 9;
             this.userControl11.Load += new System.EventHandler(this.userControl11_Load);
             this.userControl11.Click += new System.EventHandler(this.userControl11_Click);
@@ -210,9 +210,9 @@
             this.flowLayoutPanel1.Controls.Add(this.tableLayoutPanel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1249, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1317, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(720, 887);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(720, 893);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -466,7 +466,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1969, 887);
+            this.ClientSize = new System.Drawing.Size(2071, 887);
             this.Controls.Add(this.userControl11);
             this.Controls.Add(this.remember);
             this.Controls.Add(this.flowLayoutPanel2);

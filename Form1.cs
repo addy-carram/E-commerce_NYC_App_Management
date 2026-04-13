@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace e_commerce_NYC
 {
@@ -54,12 +55,7 @@ namespace e_commerce_NYC
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            panel1.Visible = true;
-            panel2.Visible = false;
-            panel3.Visible = false;
-            panel4.Visible = false;
-            panel5.Visible = false;
-            panel6.Visible = true;
+           
 
         }
 
@@ -82,57 +78,63 @@ namespace e_commerce_NYC
 
         private void label2_Click_1(object sender, EventArgs e)
         {
-            panel1.Visible = true;
-            panel2.Visible = false;
-            panel3.Visible = false;
-            panel4.Visible = false;
-            panel5.Visible = false;
-            panel6.Visible = true;
+            
         }
 
         private void label3_Click_1(object sender, EventArgs e)
         {
-            panel1.Visible = true;
-            panel2.Visible = false;
-            panel3.Visible = false;
-            panel4.Visible = false;
-            panel5.Visible = true;
-            panel6.Visible = false;
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            panel1.Visible = true;
-            panel2.Visible = false;
-            panel3.Visible = false;
-            panel4.Visible = true;
-            panel5.Visible = false;
-            panel6.Visible = false;
+           
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-            panel1.Visible = true;
-            panel2.Visible = false;
-            panel3.Visible = true;
-            panel4.Visible = false;
-            panel5.Visible = false;
-            panel6.Visible = false;
-        }
+       
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-            panel1.Visible = true;
-            panel2.Visible = true;
-            panel3.Visible = false;
-            panel4.Visible = false;
-            panel5.Visible = false;
-            panel6.Visible = false;
-        }
-
+       
         private void label71_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void ShowPage(UserControl page)
+        {
+            panelMain.Controls.Clear();
+            page.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(page);
+        }
+        private void panel15_Click(object sender, EventArgs e)
+        {
+            ShowPage(new UC_Dashboard());
+        }
+
+        private void panel11_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ShowPage(new UC_Products());
+        }
+
+        private void panel17_Click(object sender, EventArgs e)
+        {
+            ShowPage(new UC_Patients());
+        }
+
+        private void panel18_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ShowPage(new UC_Orders());
+        }
+
+        private void panel16_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ShowPage(new UC_Employee());
         }
     }
 }

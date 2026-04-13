@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace e_commerce_NYC
 {
-    public partial class Form2 : Form
+    public partial class UC_Patients : UserControl
     {
-        public Form2()
+        public UC_Patients()
         {
             InitializeComponent();
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

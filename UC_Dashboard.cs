@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace e_commerce_NYC
 {
-    public partial class Orders : Form
+    public partial class UC_Dashboard : UserControl
     {
-        public Orders()
+        public UC_Dashboard()
         {
             InitializeComponent();
         }
 
-        private void label21_Click(object sender, EventArgs e)
+        private void UC_Dashboard_Load(object sender, EventArgs e)
         {
 
         }
