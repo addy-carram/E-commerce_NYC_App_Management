@@ -220,5 +220,16 @@ namespace e_commerce_NYC
             }
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            uc_employee_delete form = new uc_employee_delete();
+
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadEmployees();
+                MessageBox.Show("Employee deleted successfully!");
+            }
+        }
     }
 }

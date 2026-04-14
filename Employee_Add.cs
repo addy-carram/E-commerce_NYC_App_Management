@@ -36,6 +36,21 @@ namespace e_commerce_NYC
                 }
                
             }
+        public void DeleteEmployee(int id)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(
+                    "DELETE FROM Employee WHERE id_employee = @id", conn);
+
+                cmd.Parameters.AddWithValue("@id", id);
+
+                cmd.ExecuteNonQuery();
+            }
+
         }
+    }
 
     }

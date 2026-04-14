@@ -65,5 +65,9 @@ namespace e_commerce_NYC
             
         }
 
+        private void uc_employee_add_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

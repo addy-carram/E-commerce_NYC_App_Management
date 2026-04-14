@@ -184,9 +184,9 @@
             this.status.AutoSize = true;
             this.status.Location = new System.Drawing.Point(375, 395);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(150, 29);
+            this.status.Size = new System.Drawing.Size(89, 29);
             this.status.TabIndex = 18;
-            this.status.Text = "checkBox1";
+            this.status.Text = "activ";
             this.status.UseVisualStyleBackColor = true;
             this.status.CheckedChanged += new System.EventHandler(this.status_CheckedChanged);
             // 
@@ -214,6 +214,7 @@
             this.Controls.Add(this.f_name);
             this.Name = "uc_employee_add";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.uc_employee_add_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
