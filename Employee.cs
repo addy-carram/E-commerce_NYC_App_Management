@@ -7,7 +7,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace e_commerce_NYC
 {
-    internal class Employee
+   public  class Employee
     {
       public int id {get;set;}
         public string first_name {get; set; }

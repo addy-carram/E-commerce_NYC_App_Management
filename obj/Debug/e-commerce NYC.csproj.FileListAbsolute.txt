@@ -22,3 +22,5 @@ D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Dashboard.resourc
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Money.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_add.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_delete.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_edit.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_edit_id.resources

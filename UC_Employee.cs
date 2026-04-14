@@ -55,6 +55,7 @@ namespace e_commerce_NYC
                 dataGridView1.Columns.Add(deleteBtn);
                 dataGridView1.Columns.Add(editBtn);
             }
+
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -84,8 +85,12 @@ namespace e_commerce_NYC
 
                 if (confirm == DialogResult.Yes)
                 {
-                    EditEmployee(id);
-                    LoadEmployees(); // reîncarcă datele
+                    uc_employee_edit form = new uc_employee_edit(id);
+
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        LoadEmployees();
+                    } // refresh datele
                 }
             }
         }
@@ -230,6 +235,95 @@ namespace e_commerce_NYC
                 LoadEmployees();
                 MessageBox.Show("Employee deleted successfully!");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            if (dataGridView1.CurrentRow == null)
+                return;
+            uc_employee_edit_id form = new uc_employee_edit_id();
+
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadEmployees();
+                MessageBox.Show("Employee updated successfully!");
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+          
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                LoadEmployees();
+                return;
+            }
+
+            SearchEmployees(textBox1.Text);
+        
+          }
+        private void SearchEmployees(string text)
+        {
+            text = text.Replace("'", "''");
+
+            DataView dv = fullData.DefaultView;
+
+            dv.RowFilter =
+                $"first_name LIKE '%{text}%' OR last_name LIKE '%{text}%'";
+
+            dataGridView1.DataSource = dv;
+            if(dv==null)
+                MessageBox.Show("No results found!");
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["btnDelete"].Index && e.RowIndex >= 0)
+            {
+                int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id_employee"].Value);
+
+                DialogResult confirm = MessageBox.Show(
+                    "Ești sigur că vrei să ștergi?",
+                    "Confirmare",
+                    MessageBoxButtons.YesNo);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    DeleteEmployee(id);
+                    LoadEmployees(); // reîncarcă datele
+                }
+            }
+            if (e.ColumnIndex == dataGridView1.Columns["btnEdit"].Index && e.RowIndex >= 0)
+            {
+                int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id_employee"].Value);
+
+                DialogResult confirm = MessageBox.Show(
+                    "Ești sigur că vrei să editezi?",
+                    "Confirmare",
+                    MessageBoxButtons.YesNo);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    uc_employee_edit form = new uc_employee_edit(id);
+
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        LoadEmployees();
+                    } // refresh datele
+                }
+            }
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                LoadEmployees();
+                return;
+            }
+
+            SearchEmployees(textBox1.Text);
         }
     }
 }

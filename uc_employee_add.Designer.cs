@@ -136,6 +136,7 @@
             this.t_f_name.Name = "t_f_name";
             this.t_f_name.Size = new System.Drawing.Size(100, 31);
             this.t_f_name.TabIndex = 11;
+            this.t_f_name.TextChanged += new System.EventHandler(this.t_f_name_TextChanged);
             // 
             // t_l_name
             // 

@@ -69,5 +69,10 @@ namespace e_commerce_NYC
         {
 
         }
+
+        private void t_f_name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
