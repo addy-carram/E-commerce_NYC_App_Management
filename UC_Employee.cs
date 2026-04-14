@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace e_commerce_NYC
 {
@@ -23,6 +24,9 @@ namespace e_commerce_NYC
 
             InitializeComponent();
             LoadEmployees();
+            LoadRoles();
+            LoadChartFromDB();
+            Loadtop();
            
 
         }
@@ -324,6 +328,90 @@ namespace e_commerce_NYC
             }
 
             SearchEmployees(textBox1.Text);
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+        public void LoadRoles()
+        {
+            try
+            {
+                string connStr = @"Data Source = Adina\SQLEXPRESS; Initial Catalog = EUROPTICA; Integrated Security=True; TrustServerCertificate=True";
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(
+                        "SELECT role_name FROM Employee_Role", conn);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dataGridView2.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message);
+            }
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+        //chard from my database it is about roles-number of people 
+        private void LoadChartFromDB()
+        {
+            chart1.Series.Clear();
+
+            Series series = new Series("EmployeesByRole");
+            series.ChartType = SeriesChartType.Column;
+
+            string connStr = @"Data Source=Adina\SQLEXPRESS;Initial Catalog=EUROPTICA;Integrated Security=True";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(@"
+            SELECT role_name, COUNT(E.id_role) AS TotalEmployees 
+            FROM Employee_Role R
+            JOIN Employee E ON R.id_role=E.id_role
+            GROUP BY role_name", conn);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string role = reader[0].ToString();
+                    int count = Convert.ToInt32(reader[1]);
+
+                    series.Points.AddXY(role, count);
+                }
+            }
+
+            chart1.Series.Add(series);
+        }
+        public void Loadtop()
+        {
+            try
+            {
+                string connStr = @"Data Source = Adina\SQLEXPRESS; Initial Catalog = EUROPTICA; Integrated Security=True; TrustServerCertificate=True";
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(
+                        "SELECT TOP 5 first_name,last_name,salary FROM Employee ORDER BY salary DESC;", conn);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dataGridView3.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message);
+            }
         }
     }
 }
