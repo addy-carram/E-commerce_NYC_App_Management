@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employee.cs" />
+    <Compile Include="Employee_Add.cs" />
+    <Compile Include="EUROPTICADataSet.cs">
+      <DependentUpon>EUROPTICADataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EUROPTICADataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -57,6 +62,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_employee_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uc_employee_add.Designer.cs">
+      <DependentUpon>uc_employee_add.cs</DependentUpon>
     </Compile>
     <Compile Include="log2.cs">
       <SubType>Form</SubType>
@@ -128,6 +139,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_employee_add.resx">
+      <DependentUpon>uc_employee_add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="log2.resx">
       <DependentUpon>log2.cs</DependentUpon>
