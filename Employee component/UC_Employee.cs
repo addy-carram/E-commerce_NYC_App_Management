@@ -585,5 +585,10 @@ E                   Order by is_active", conn);
                 dataGridView1.DataSource = dt;
             }
         }
+
+        private void panelPagination_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
