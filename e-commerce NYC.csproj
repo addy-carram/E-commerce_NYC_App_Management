@@ -54,6 +54,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Patient component\uc_patient_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient component\uc_patient_edit.Designer.cs">
+      <DependentUpon>uc_patient_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient component\uc_patient_edit_id.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient component\uc_patient_edit_id.Designer.cs">
+      <DependentUpon>uc_patient_edit_id.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient component\uc_patient_delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient component\uc_patient_delete.Designer.cs">
+      <DependentUpon>uc_patient_delete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient component\Patient.cs" />
     <Compile Include="Employee component\Employee.cs" />
     <Compile Include="Employee component\Employee_Add.cs" />
@@ -175,6 +193,9 @@
     <Compile Include="UC_Dashboard.Designer.cs">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Patient component\uc_patient_delete.resx">
+      <DependentUpon>uc_patient_delete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +220,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Models\loginlabels.resx">
       <DependentUpon>loginlabels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient component\uc_patient_edit.resx">
+      <DependentUpon>uc_patient_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient component\uc_patient_edit_id.resx">
+      <DependentUpon>uc_patient_edit_id.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
