@@ -6,10 +6,13 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+
+using System.IO;
 
 namespace e_commerce_NYC
 {
@@ -24,9 +27,11 @@ namespace e_commerce_NYC
 
             InitializeComponent();
             LoadEmployees();
-            LoadRoles();
+            //LoadRoles();
             LoadChartFromDB();
             Loadtop();
+            LoadAnalist();
+            LoadSalaryDistributionChart();
            
 
         }
@@ -333,27 +338,27 @@ namespace e_commerce_NYC
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
-        public void LoadRoles()
-        {
-            try
-            {
-                string connStr = @"Data Source = Adina\SQLEXPRESS; Initial Catalog = EUROPTICA; Integrated Security=True; TrustServerCertificate=True";
-                using (SqlConnection conn = new SqlConnection(connStr))
-                {
-                    conn.Open();
-                    SqlCommand cmd = new SqlCommand(
-                        "SELECT role_name FROM Employee_Role", conn);
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    dataGridView2.DataSource = dt;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error : " + ex.Message);
-            }
-        }
+        //public void LoadRoles()
+        //{
+        //    try
+        //    {
+        //        string connStr = @"Data Source = Adina\SQLEXPRESS; Initial Catalog = EUROPTICA; Integrated Security=True; TrustServerCertificate=True";
+        //        using (SqlConnection conn = new SqlConnection(connStr))
+        //        {
+        //            conn.Open();
+        //            SqlCommand cmd = new SqlCommand(
+        //                "SELECT role_name FROM Employee_Role", conn);
+        //            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+        //            DataTable dt = new DataTable();
+        //            adapter.Fill(dt);
+        //            dataGridView2.DataSource = dt;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error : " + ex.Message);
+        //    }
+        //}
 
         private void chart1_Click(object sender, EventArgs e)
         {
@@ -411,6 +416,173 @@ namespace e_commerce_NYC
             catch (Exception ex)
             {
                 MessageBox.Show("Error : " + ex.Message);
+            }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void LoadAnalist()
+        {
+            string connectionString = @"Data Source=Adina\SQLEXPRESS;Initial Catalog=EUROPTICA;Integrated Security=True;TrustServerCertificate=True";
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+
+                string query = "SELECT COUNT(*) FROM Employee";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                int count = (int)cmd.ExecuteScalar();
+                string query2 = "SELECT AVG(salary) FROM Employee";
+                SqlCommand cmd2 = new SqlCommand(query2, con);
+                decimal average = Convert.ToDecimal(cmd2.ExecuteScalar());
+
+                string query3 = "SELECT SUM(salary) FROM Employee";
+                SqlCommand cmd3 = new SqlCommand(query3, con);
+                decimal totalSalary = Convert.ToDecimal(cmd3.ExecuteScalar());
+
+                string query4 = "SELECT TOP 1 salary FROM Employee ORDER BY salary DESC";
+                SqlCommand cmd4 = new SqlCommand(query4, con);
+                decimal TopS = Convert.ToDecimal(cmd4.ExecuteScalar());
+
+                label3.Text = count.ToString();
+                label4.Text = average.ToString();
+                label6.Text = totalSalary.ToString();
+                label8.Text = TopS.ToString();
+            }
+            
+        }
+
+        private void pdf_Click(object sender, EventArgs e)
+        {
+            string url = "http://localhost/ReportServer?/YourFolder/YourReportName&rs:Command=Render&rs:Format=PDF";
+
+            WebClient client = new WebClient();
+
+            byte[] data = client.DownloadData(url);
+
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "PDF file (*.pdf)|*.pdf";
+            save.FileName = "Report.pdf";
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                File.WriteAllBytes(save.FileName, data);
+                MessageBox.Show("Report downloaded successfully!");
+            }
+        }
+
+        private void chart2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void LoadSalaryDistributionChart()
+        {
+            chart2.Series.Clear();
+
+            Series series = new Series("Salary Distribution");
+            series.ChartType = SeriesChartType.Column;
+
+            string connStr = @"Data Source=Adina\SQLEXPRESS;Initial Catalog=EUROPTICA;Integrated Security=True";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(@"
+            SELECT 
+                CASE 
+                    WHEN salary < 5000 THEN '0-5000'
+                    WHEN salary BETWEEN 5000 AND 10000 THEN '5000-10000'
+                    ELSE '10000+'
+                END AS SalaryRange,
+                COUNT(*) AS TotalPeople
+            FROM Employee
+            GROUP BY 
+                CASE 
+                    WHEN salary < 5000 THEN '0-5000'
+                    WHEN salary BETWEEN 5000 AND 10000 THEN '5000-10000'
+                    ELSE '10000+'
+                END", conn);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string range = reader[0].ToString();
+                    int count = Convert.ToInt32(reader[1]);
+
+                    series.Points.AddXY(range, count);
+                }
+            }
+
+            chart2.Series.Add(series);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           switch(comboBox1.SelectedItem.ToString())
+            {
+                case "Role":
+                    LoadDateByRole();
+                    break;
+                case "Date":
+                    LoadDateByDate();
+                    break;
+                case "Status":
+                    LoadDateByStatus();
+                    break;
+                default:
+                    LoadEmployees();
+                    break;
+            }
+        }
+        private void LoadDateByRole()
+        {
+            string connSt=@" Data Source=Adina\SQLEXPRESS;Initial Catalog=EUROPTICA;Integrated Security=True";
+            using (SqlConnection conn=new SqlConnection(connSt))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(
+                    @"Select *From Employee
+E                   Order by id_role", conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+        }
+        private void LoadDateByDate()
+        {
+            string connSt = @" Data Source=Adina\SQLEXPRESS;Initial Catalog=EUROPTICA;Integrated Security=True";
+            using (SqlConnection conn = new SqlConnection(connSt))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(
+                    @"Select *From Employee
+E                   Order by hire_date", conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+        }
+        private void LoadDateByStatus()
+        {
+            string connSt = @" Data Source=Adina\SQLEXPRESS;Initial Catalog=EUROPTICA;Integrated Security=True";
+            using (SqlConnection conn = new SqlConnection(connSt))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(
+                    @"Select *From Employee
+E                   Order by is_active", conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                dataGridView1.DataSource = dt;
             }
         }
     }

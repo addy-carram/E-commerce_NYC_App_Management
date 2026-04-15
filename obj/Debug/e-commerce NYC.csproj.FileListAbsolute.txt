@@ -24,3 +24,5 @@ D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_add.reso
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_delete.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_edit.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_edit_id.resources
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\Guna.UI2.dll
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commer.11CDE8D9.Up2Date
