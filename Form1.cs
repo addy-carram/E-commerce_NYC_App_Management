@@ -136,5 +136,10 @@ namespace e_commerce_NYC
             panelMain.Controls.Clear();
             ShowPage(new UC_Employee());
         }
+
+        private void user_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace e_commerce_NYC
+namespace e_commerce_NYC.Order_component
 {
-    public partial class UC_Orders : UserControl
+    public partial class uc_order_edit : Form
     {
-        public UC_Orders()
+        public uc_order_edit()
         {
             InitializeComponent();
         }

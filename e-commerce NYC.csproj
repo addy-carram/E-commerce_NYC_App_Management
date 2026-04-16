@@ -54,6 +54,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Order component\Order.cs" />
+    <Compile Include="Order component\order_action_sql.cs" />
+    <Compile Include="Order component\uc_order_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order component\uc_order_add.Designer.cs">
+      <DependentUpon>uc_order_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order component\uc_order_delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order component\uc_order_delete.Designer.cs">
+      <DependentUpon>uc_order_delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order component\uc_order_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order component\uc_order_edit.Designer.cs">
+      <DependentUpon>uc_order_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order component\uc_order_edit_id.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order component\uc_order_edit_id.Designer.cs">
+      <DependentUpon>uc_order_edit_id.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient component\uc_patient_edit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,10 +215,10 @@
     <Compile Include="UC_Money.Designer.cs">
       <DependentUpon>UC_Money.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Orders.cs">
+    <Compile Include="Order component\UC_Orders.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Orders.Designer.cs">
+    <Compile Include="Order component\UC_Orders.Designer.cs">
       <DependentUpon>UC_Orders.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient component\UC_Patients.cs">
@@ -219,6 +245,9 @@
     <Compile Include="UC_Dashboard.Designer.cs">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Order component\uc_order_add.resx">
+      <DependentUpon>uc_order_add.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patient component\uc_patient_delete.resx">
       <DependentUpon>uc_patient_delete.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,7 +319,7 @@
     <EmbeddedResource Include="UC_Money.resx">
       <DependentUpon>UC_Money.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Orders.resx">
+    <EmbeddedResource Include="Order component\UC_Orders.resx">
       <DependentUpon>UC_Orders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient component\UC_Patients.resx">
