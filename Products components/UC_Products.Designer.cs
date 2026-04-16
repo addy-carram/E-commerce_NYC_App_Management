@@ -214,6 +214,7 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 33;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             // 
             // panelPagination
             // 
@@ -257,6 +258,7 @@
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.Size = new System.Drawing.Size(193, 36);
             this.guna2ComboBox1.TabIndex = 27;
+            this.guna2ComboBox1.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
             // guna2TextBox1
             // 
@@ -472,9 +474,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(162, 34);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(128, 25);
+            this.label10.Size = new System.Drawing.Size(204, 25);
             this.label10.TabIndex = 6;
-            this.label10.Text = "Top gender ";
+            this.label10.Text = "Top price of product";
             // 
             // pictureBox4
             // 
@@ -572,9 +574,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(168, 34);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(130, 25);
+            this.label9.Size = new System.Drawing.Size(180, 25);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Country Top";
+            this.label9.Text = "Country Producer";
             // 
             // panelCard1
             // 
@@ -618,9 +620,9 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(168, 34);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(169, 25);
+            this.label7.Size = new System.Drawing.Size(200, 25);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Total Custumers";
+            this.label7.Text = "Number of products";
             // 
             // tableLayoutPanel3
             // 
