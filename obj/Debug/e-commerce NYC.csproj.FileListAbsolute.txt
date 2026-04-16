@@ -30,3 +30,7 @@ D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_patient_add.resou
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Employee_component.uc_patient_delete.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Patient_component.uc_patient_edit.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Patient_component.uc_patient_edit_id.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Products_components.uc_product_add.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Products_components.uc_product_delete.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Products_components.uc_product_edit_id.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Products_components.uc_product_edit.resources

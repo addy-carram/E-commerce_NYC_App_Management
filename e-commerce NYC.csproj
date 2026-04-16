@@ -131,6 +131,32 @@
     <Compile Include="Models\loginlabels.Designer.cs">
       <DependentUpon>loginlabels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Products components\Product.cs" />
+    <Compile Include="Products components\product_action_sql.cs" />
+    <Compile Include="Products components\uc_product_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products components\uc_product_add.Designer.cs">
+      <DependentUpon>uc_product_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products components\uc_product_delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products components\uc_product_delete.Designer.cs">
+      <DependentUpon>uc_product_delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products components\uc_product_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products components\uc_product_edit.Designer.cs">
+      <DependentUpon>uc_product_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products components\uc_product_edit_id.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products components\uc_product_edit_id.Designer.cs">
+      <DependentUpon>uc_product_edit_id.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Employee component\UC_Employee.cs">
@@ -175,10 +201,10 @@
     <Compile Include="Patient component\UC_Patients.Designer.cs">
       <DependentUpon>UC_Patients.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Products.cs">
+    <Compile Include="Products components\UC_Products.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Products.Designer.cs">
+    <Compile Include="Products components\UC_Products.Designer.cs">
       <DependentUpon>UC_Products.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl1.cs">
@@ -227,6 +253,18 @@
     <EmbeddedResource Include="Patient component\uc_patient_edit_id.resx">
       <DependentUpon>uc_patient_edit_id.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Products components\uc_product_add.resx">
+      <DependentUpon>uc_product_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products components\uc_product_delete.resx">
+      <DependentUpon>uc_product_delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products components\uc_product_edit.resx">
+      <DependentUpon>uc_product_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products components\uc_product_edit_id.resx">
+      <DependentUpon>uc_product_edit_id.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -258,7 +296,7 @@
     <EmbeddedResource Include="Patient component\UC_Patients.resx">
       <DependentUpon>UC_Patients.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Products.resx">
+    <EmbeddedResource Include="Products components\UC_Products.resx">
       <DependentUpon>UC_Products.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">

@@ -18,7 +18,7 @@ namespace e_commerce_NYC
     public partial class UC_Patients : UserControl
     {
         private DataTable fullData,fullData2;
-        private int pageSize = 10; // câte rânduri pe pagină
+        private int pageSize = 10; 
         private int currentPage = 0;
         public UC_Patients()
         {
