@@ -34,3 +34,4 @@ D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Products_components.
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Products_components.uc_product_delete.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Products_components.uc_product_edit_id.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Products_components.uc_product_edit.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_order_add.resources

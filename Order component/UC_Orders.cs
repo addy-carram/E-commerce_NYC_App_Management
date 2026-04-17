@@ -11,20 +11,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace e_commerce_NYC
 {
     public partial class UC_Orders : UserControl
     {
-        private DataTable fullData, fullData2,fullData3,fullData4;
+        private DataTable fullData, fullData2, fullData3, fullData4;
         private int pageSize = 10;
         private int currentPage = 0;
         public UC_Orders()
         {
             InitializeComponent();
             LoadOrders();
+            LoadTable2();
             LoadOrderProcessing();
             LoadOrderRefund();
+            LoadAnalytics();
+            LoadPaymentMethodChart();
+            LoadOrdersByYearChart();
         }
         private void LoadOrders()
         {
@@ -36,7 +41,7 @@ namespace e_commerce_NYC
                     conn.Open();
                     SqlDataAdapter adapter = new SqlDataAdapter(
                         @"SELECT   o.id_order,  p.first_name + ' ' + p.last_name AS client,e.first_name+' '+e.last_name AS employee," +
-                        "er.role_name, prod.model_name AS produs,  pt.type_name AS tip_produs,  o.total_amount AS pret,  " +
+                        "er.role_name AS role, prod.model_name AS produs,  pt.type_name AS tip_produs,  o.total_amount AS pret,  " +
                         " os.status_name AS status,   ps.status_name AS plata,pm.method_name AS metoda" +
                         " FROM Order_Table o" +
                         " JOIN Employee e ON o.id_employee=e.id_employee" +
@@ -51,7 +56,7 @@ namespace e_commerce_NYC
 
                     fullData = new DataTable();
                     adapter.Fill(fullData);
-                    ShowPage(0,panelPagination,guna2DataGridView1,fullData);
+                    ShowPage(0, panelPagination, guna2DataGridView1, fullData);
                     guna2DataGridView1.DataSource = fullData;
                 }
                 if (!guna2DataGridView1.Columns.Contains("btnDelete"))
@@ -106,7 +111,7 @@ namespace e_commerce_NYC
 
                     fullData3 = new DataTable();
                     adapter.Fill(fullData3);
-                    ShowPage(0,panelPagination1,guna2DataGridView3,fullData3);
+                    ShowPage(0, panelPagination1, guna2DataGridView3, fullData3);
                     guna2DataGridView3.DataSource = fullData3;
                 }
                 if (!guna2DataGridView3.Columns.Contains("btnDelete"))
@@ -146,7 +151,7 @@ namespace e_commerce_NYC
                     conn.Open();
                     SqlDataAdapter adapter = new SqlDataAdapter(
                         @"SELECT   o.id_order,  p.first_name + ' ' + p.last_name AS client,e.first_name+' '+e.last_name AS employee," +
-                        "er.role_name, prod.model_name AS produs,  pt.type_name AS tip_produs,  o.total_amount AS pret,  " +
+                        "er.role_name as role, prod.model_name AS produs,  pt.type_name AS tip_produs,  o.total_amount AS pret,  " +
                         " os.status_name AS status,   ps.status_name AS plata,pm.method_name AS metoda" +
                         " FROM Order_Table o" +
                         " JOIN Employee e ON o.id_employee=e.id_employee" +
@@ -161,7 +166,7 @@ namespace e_commerce_NYC
 
                     fullData4 = new DataTable();
                     adapter.Fill(fullData4);
-                    ShowPage(0,panelPagination2,guna2DataGridView4,fullData4);
+                    ShowPage(0, panelPagination2, guna2DataGridView4, fullData4);
                     guna2DataGridView4.DataSource = fullData4;
                 }
                 if (!guna2DataGridView4.Columns.Contains("btnDelete"))
@@ -196,7 +201,7 @@ namespace e_commerce_NYC
         {
             try
             {
-                uc_order_add AddOrder= new uc_order_add();
+                uc_order_add AddOrder = new uc_order_add();
                 if (AddOrder.ShowDialog() == DialogResult.OK)
                 {
                     LoadOrders();
@@ -211,7 +216,7 @@ namespace e_commerce_NYC
             }
         }
 
-        private void ShowPage(int page, Panel panelPagination,DataGridView guna2DataGridView1,DataTable fullData)
+        private void ShowPage(int page, Panel panelPagination, DataGridView guna2DataGridView1, DataTable fullData)
         {
             currentPage = page;
             int totalPages = (int)Math.Ceiling((double)fullData.Rows.Count / pageSize);
@@ -232,11 +237,109 @@ namespace e_commerce_NYC
             guna2DataGridView1.Height = height;
 
             // Actualizează butoanele de paginare
-            UpdatePaginationButtons(totalPages, panelPagination, guna2DataGridView1,fullData);
+            UpdatePaginationButtons(totalPages, panelPagination, guna2DataGridView1, fullData);
         }
 
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string connStr = @"Data Source=Adina\SQLEXPRESS;Initial Catalog=EUROPTICA;Integrated Security=True";
+                switch (guna2ComboBox1.SelectedItem.ToString())
+                {
+                    case "Customer":
+                        {
+                            using (SqlConnection conn = new SqlConnection(connStr))
+                            {
+                                conn.Open();
+                                SqlDataAdapter adapter = new SqlDataAdapter(
+                                    @"SELECT   o.id_order,  p.first_name + ' ' + p.last_name AS client,e.first_name+' '+e.last_name AS employee," +
+                                    "er.role_name as role, prod.model_name AS produs,  pt.type_name AS tip_produs,  o.total_amount AS pret,  " +
+                                    " os.status_name AS status,   ps.status_name AS plata,pm.method_name AS metoda" +
+                                    " FROM Order_Table o" +
+                                    " JOIN Employee e ON o.id_employee=e.id_employee" +
+                                    " JOIN Employee_Role er ON e.id_role=er.id_role " +
+                                    " JOIN Patient p ON o.id_patient = p.id_patient " +
+                                    " JOIN Product prod ON o.id_product = prod.id_product " +
+                                    " JOIN Product_Type pt ON prod.id_product_type = pt.id_product_type" +
+                                    " JOIN Order_Status os ON o.id_order_status = os.id_order_status " +
+                                    " JOIN Payment_Status ps ON o.id_payment_status = ps.id_payment_status" +
+                                    " JOIN Payment_Method pm ON o.id_payment_method=pm.id_payment_method" +
+                                    " Order by client", conn);
 
-        private void UpdatePaginationButtons(int totalPages, Panel panelPagination, DataGridView guna2DataGridView1,DataTable fullData)
+                                DataTable dt = new DataTable();
+                                adapter.Fill(dt);
+                                guna2DataGridView1.DataSource = dt;
+                            }
+                            break;
+                        }
+                    case "Employee":
+                        {
+                            using (SqlConnection conn = new SqlConnection(connStr))
+                            {
+                                conn.Open();
+                                SqlDataAdapter adapter = new SqlDataAdapter(
+                                    @"SELECT   o.id_order,  p.first_name + ' ' + p.last_name AS client,e.first_name+' '+e.last_name AS employee," +
+                                    "er.role_name as role, prod.model_name AS produs,  pt.type_name AS tip_produs,  o.total_amount AS pret,  " +
+                                    " os.status_name AS status,   ps.status_name AS plata,pm.method_name AS metoda" +
+                                    " FROM Order_Table o" +
+                                    " JOIN Employee e ON o.id_employee=e.id_employee" +
+                                    " JOIN Employee_Role er ON e.id_role=er.id_role " +
+                                    " JOIN Patient p ON o.id_patient = p.id_patient " +
+                                    " JOIN Product prod ON o.id_product = prod.id_product " +
+                                    " JOIN Product_Type pt ON prod.id_product_type = pt.id_product_type" +
+                                    " JOIN Order_Status os ON o.id_order_status = os.id_order_status " +
+                                    " JOIN Payment_Status ps ON o.id_payment_status = ps.id_payment_status" +
+                                    " JOIN Payment_Method pm ON o.id_payment_method=pm.id_payment_method" +
+                                    " Order by employee", conn);
+
+                                DataTable dt = new DataTable();
+                                adapter.Fill(dt);
+                                guna2DataGridView1.DataSource = dt;
+                            }
+                            break;
+                        }
+                    case "Payment status":
+                        {
+                            using (SqlConnection conn = new SqlConnection(connStr))
+                            {
+                                conn.Open();
+                                SqlDataAdapter adapter = new SqlDataAdapter(
+                                    @"SELECT   o.id_order,  p.first_name + ' ' + p.last_name AS client,e.first_name+' '+e.last_name AS employee," +
+                                    "er.role_name as role, prod.model_name AS produs,  pt.type_name AS tip_produs,  o.total_amount AS pret,  " +
+                                    " os.status_name AS status,   ps.status_name AS plata,pm.method_name AS metoda" +
+                                    " FROM Order_Table o" +
+                                    " JOIN Employee e ON o.id_employee=e.id_employee" +
+                                    " JOIN Employee_Role er ON e.id_role=er.id_role " +
+                                    " JOIN Patient p ON o.id_patient = p.id_patient " +
+                                    " JOIN Product prod ON o.id_product = prod.id_product " +
+                                    " JOIN Product_Type pt ON prod.id_product_type = pt.id_product_type" +
+                                    " JOIN Order_Status os ON o.id_order_status = os.id_order_status " +
+                                    " JOIN Payment_Status ps ON o.id_payment_status = ps.id_payment_status" +
+                                    " JOIN Payment_Method pm ON o.id_payment_method=pm.id_payment_method" +
+                                    " Order by plata", conn);
+
+                                DataTable dt = new DataTable();
+                                adapter.Fill(dt);
+                                guna2DataGridView1.DataSource = dt;
+                            }
+                            break;
+                        }
+                    default:
+                        {
+                            LoadOrders();
+                            break;
+                        }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+
+            }
+        }
+
+        private void UpdatePaginationButtons(int totalPages, Panel panelPagination, DataGridView guna2DataGridView1, DataTable fullData)
         {
             panelPagination.Controls.Clear();
             int btnWidth = 35;
@@ -267,10 +370,174 @@ namespace e_commerce_NYC
                 panelPagination.Controls.Add(btn);
                 x += btnWidth + 5;
             }
-        }
+        }//textboxul for the searching
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(guna2TextBox1.Text))
+            {
+                LoadOrders();
+                return;
+            }
 
+            SearchProducts(guna2TextBox1.Text);
+        }
+        private void SearchProducts(string text)
+        {
+            text = text.Replace("'", "''");
+
+            DataView dv = fullData.DefaultView;
+
+            dv.RowFilter =
+                $"client LIKE '%{text}%' OR produs LIKE '%{text}%' OR employee LIKE '%{text}%'" +
+                $" OR role LIKE '%{text}%' OR produs LIKE '%{text}%'";
+
+            guna2DataGridView1.DataSource = dv;
+            if (dv == null)
+                MessageBox.Show("No results found!");
+        }
+        //the kpi panel of general informationabout the orders
+        private void LoadAnalytics()
+        {
+            try
+            {
+                string connStr = @"Data Source=Adina\SQLEXPRESS;Initial Catalog=EUROPTICA;Integrated Security=True";
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Order_Table", conn);
+                    int totalOrders = Convert.ToInt32(cmd.ExecuteScalar());
+                    SqlCommand cmd1 = new SqlCommand("SELECT SUM(total_amount) FROM Order_Table", conn);
+                    decimal totalRevenue = Convert.ToDecimal(cmd1.ExecuteScalar());
+                    SqlCommand cmd2 = new SqlCommand("SELECT (SUM(CASE WHEN id_payment_status = 5 THEN 1 ELSE 0 END)*100)/Count(id_order) FROM Order_Table", conn);
+                    decimal percentage = Convert.ToDecimal(cmd2.ExecuteScalar());
+                    SqlCommand cmd3 = new SqlCommand("SELECT TOP 1 pt.type_name FROM Order_Table o JOIN Product p On o.id_product=p.id_product\r\nJOIN Product_Type pt On p.id_product_type=pt.id_product_type", conn);
+                    string topproducts = cmd3.ExecuteScalar().ToString();
+
+                    label3.Text =totalOrders.ToString();
+                    label4.Text = totalRevenue.ToString();
+                    label5.Text = percentage.ToString() + "%";
+                    label6.Text = topproducts;
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        
+        }
+        /// <summary>
+        /// method of payment of our client 
+        /// </summary>
+        private void LoadPaymentMethodChart()
+        {
+            string connStr = @"Data Source=Adina\SQLEXPRESS;Initial Catalog=EUROPTICA;Integrated Security=True";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+
+                string query = @"
+            SELECT 
+                pm.method_name,
+                COUNT(o.id_order) AS TotalOrders
+            FROM Order_Table o
+            JOIN Payment_Method pm 
+                ON o.id_payment_method = pm.id_payment_method
+            GROUP BY pm.method_name
+            ORDER BY TotalOrders DESC";
+
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                chart1.Series.Clear();
+                chart1.Titles.Clear();
+
+                chart1.Titles.Add("Payment Methods");
+
+                Series series = new Series("Methods");
+                series.ChartType = SeriesChartType.Pie;   // or Column
+
+                chart1.Series.Add(series);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    series.Points.AddXY(
+                        row["method_name"].ToString(),
+                        row["TotalOrders"]);
+                }
+
+                series.IsValueShownAsLabel = true;
+                chart1.Legends[0].Enabled = true;
+            }
+        }
+        /// <summary>
+        /// one char about our number of orders over 3 years
+        /// </summary>
+        private void LoadOrdersByYearChart()
+        {
+            string connStr = @"Data Source=Adina\SQLEXPRESS;Initial Catalog=EUROPTICA;Integrated Security=True";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+
+                string query = @"
+            SELECT 
+                YEAR(order_date) AS An,
+                COUNT(id_order) AS TotalOrders
+            FROM Order_Table
+            WHERE YEAR(order_date) IN (2023, 2024, 2025)
+            GROUP BY YEAR(order_date)
+            ORDER BY An";
+
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                
+                chart2.Series.Clear();
+                chart2.Titles.Clear();
+
+                chart2.Titles.Add("Orders by Year");
+
+                Series series = new Series("Orders");
+                series.ChartType = SeriesChartType.Line;
+                series.BorderWidth = 3;
+                series.IsValueShownAsLabel = true;
+                chart2.Series.Add(series);
+                series.ChartType = SeriesChartType.Line;
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    series.Points.AddXY(
+                        row["An"].ToString(),
+                        row["TotalOrders"]);
+                }
+
+                series.IsValueShownAsLabel = true;
+            }
+        }
+        private void LoadTable2()
+        {
+            try
+            {
+                string connStr = @"Data Source=Adina\SQLEXPRESS;Initial Catalog=EUROPTICA;Integrated Security=True";
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter("Select * From HR.vw_Vanzari_Pe_Categorii", conn);
+                    fullData2 = new DataTable();
+                    adapter.Fill(fullData2);
+                    guna2DataGridView2.DataSource = fullData2;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
         }
     }
 }

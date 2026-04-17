@@ -9,7 +9,7 @@ namespace e_commerce_NYC.Order_component
 {
     public  class order_action_sql
     {
-        public void AddOrder(Order o)
+        public void AddOrder()
         {
 
         }
