@@ -585,7 +585,7 @@
             this.user.ForeColor = System.Drawing.Color.White;
             this.user.Image = ((System.Drawing.Image)(resources.GetObject("user.Image")));
             this.user.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.user.ImageSize = new System.Drawing.Size(32, 32);
+            this.user.ImageSize = new System.Drawing.Size(28, 28);
             this.user.Location = new System.Drawing.Point(1276, 23);
             this.user.Name = "user";
             this.user.PressedDepth = 0;

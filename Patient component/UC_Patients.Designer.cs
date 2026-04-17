@@ -250,11 +250,11 @@
             this.panelCard4.Controls.Add(this.pictureBox4);
             this.panelCard4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCard4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelCard4.Location = new System.Drawing.Point(1292, 0);
-            this.panelCard4.Margin = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.panelCard4.Location = new System.Drawing.Point(1292, 20);
+            this.panelCard4.Margin = new System.Windows.Forms.Padding(20);
             this.panelCard4.Name = "panelCard4";
             this.panelCard4.Padding = new System.Windows.Forms.Padding(10);
-            this.panelCard4.Size = new System.Drawing.Size(385, 165);
+            this.panelCard4.Size = new System.Drawing.Size(385, 125);
             this.panelCard4.TabIndex = 9;
             // 
             // label6
@@ -295,11 +295,11 @@
             this.panelCard2.Controls.Add(this.pictureBox2);
             this.panelCard2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCard2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelCard2.Location = new System.Drawing.Point(444, 0);
-            this.panelCard2.Margin = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.panelCard2.Location = new System.Drawing.Point(444, 20);
+            this.panelCard2.Margin = new System.Windows.Forms.Padding(20);
             this.panelCard2.Name = "panelCard2";
             this.panelCard2.Padding = new System.Windows.Forms.Padding(10);
-            this.panelCard2.Size = new System.Drawing.Size(384, 165);
+            this.panelCard2.Size = new System.Drawing.Size(384, 125);
             this.panelCard2.TabIndex = 8;
             // 
             // label4
@@ -340,11 +340,11 @@
             this.panel2.Controls.Add(this.label9);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Location = new System.Drawing.Point(868, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.panel2.Location = new System.Drawing.Point(868, 20);
+            this.panel2.Margin = new System.Windows.Forms.Padding(20);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.panel2.Size = new System.Drawing.Size(384, 165);
+            this.panel2.Size = new System.Drawing.Size(384, 125);
             this.panel2.TabIndex = 6;
             // 
             // pictureBox3
@@ -384,11 +384,11 @@
             this.panelCard1.Controls.Add(this.label3);
             this.panelCard1.Controls.Add(this.label7);
             this.panelCard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCard1.Location = new System.Drawing.Point(20, 0);
-            this.panelCard1.Margin = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.panelCard1.Location = new System.Drawing.Point(20, 20);
+            this.panelCard1.Margin = new System.Windows.Forms.Padding(20);
             this.panelCard1.Name = "panelCard1";
             this.panelCard1.Padding = new System.Windows.Forms.Padding(10);
-            this.panelCard1.Size = new System.Drawing.Size(384, 165);
+            this.panelCard1.Size = new System.Drawing.Size(384, 125);
             this.panelCard1.TabIndex = 4;
             this.panelCard1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCard1_Paint);
             // 
@@ -440,35 +440,45 @@
             // 
             // chart1
             // 
+            this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(209)))), ((int)(((byte)(255)))));
+            this.chart1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.BackwardDiagonal;
+            this.chart1.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(3, 3);
+            this.chart1.Location = new System.Drawing.Point(20, 30);
+            this.chart1.Margin = new System.Windows.Forms.Padding(20, 30, 20, 30);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(842, 227);
+            this.chart1.Size = new System.Drawing.Size(808, 173);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
             // chart2
             // 
+            this.chart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(209)))), ((int)(((byte)(255)))));
+            this.chart2.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.BackwardDiagonal;
+            this.chart2.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.chart2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             chartArea2.Name = "ChartArea1";
             this.chart2.ChartAreas.Add(chartArea2);
             this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(851, 3);
+            this.chart2.Location = new System.Drawing.Point(868, 30);
+            this.chart2.Margin = new System.Windows.Forms.Padding(20, 30, 20, 30);
             this.chart2.Name = "chart2";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(843, 227);
+            this.chart2.Size = new System.Drawing.Size(809, 173);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
             // 
@@ -496,12 +506,13 @@
             this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.Location = new System.Drawing.Point(3, 413);
+            this.guna2DataGridView2.Location = new System.Drawing.Point(20, 430);
+            this.guna2DataGridView2.Margin = new System.Windows.Forms.Padding(20);
             this.guna2DataGridView2.Name = "guna2DataGridView2";
             this.guna2DataGridView2.RowHeadersVisible = false;
             this.guna2DataGridView2.RowHeadersWidth = 82;
             this.guna2DataGridView2.RowTemplate.Height = 33;
-            this.guna2DataGridView2.Size = new System.Drawing.Size(1697, 269);
+            this.guna2DataGridView2.Size = new System.Drawing.Size(1663, 235);
             this.guna2DataGridView2.TabIndex = 2;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;

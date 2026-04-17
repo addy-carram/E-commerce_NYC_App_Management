@@ -407,6 +407,12 @@ namespace e_commerce_NYC
                 }
             }
         }
+
+        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void LoadTop5MaterialsChart()
         {
             string connStr = @"Data Source=Adina\SQLEXPRESS;Initial Catalog=EUROPTICA;Integrated Security=True;TrustServerCertificate=True";

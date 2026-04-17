@@ -16,6 +16,7 @@ namespace e_commerce_NYC
         public Form1()
         {
             InitializeComponent();
+            ShowPage(new UC_Dashboard());
         }
 
         private void label1_Click(object sender, EventArgs e)

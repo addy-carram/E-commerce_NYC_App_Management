@@ -614,6 +614,11 @@ namespace e_commerce_NYC
             }
         }
 
+        private void chart2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
