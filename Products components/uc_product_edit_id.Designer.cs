@@ -47,7 +47,7 @@
             this.guna2TextBox1.Location = new System.Drawing.Point(254, 138);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.PlaceholderText = "ex: 1";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.Size = new System.Drawing.Size(276, 77);
             this.guna2TextBox1.TabIndex = 3;

@@ -248,6 +248,12 @@
     <EmbeddedResource Include="Order component\uc_order_add.resx">
       <DependentUpon>uc_order_add.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Order component\uc_order_delete.resx">
+      <DependentUpon>uc_order_delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order component\uc_order_edit_id.resx">
+      <DependentUpon>uc_order_edit_id.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patient component\uc_patient_delete.resx">
       <DependentUpon>uc_patient_delete.cs</DependentUpon>
     </EmbeddedResource>

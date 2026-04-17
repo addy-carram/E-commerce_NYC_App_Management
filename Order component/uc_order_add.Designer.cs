@@ -53,7 +53,7 @@
             this.person_name.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.person_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.person_name.ItemHeight = 30;
-            this.person_name.Location = new System.Drawing.Point(173, 145);
+            this.person_name.Location = new System.Drawing.Point(64, 146);
             this.person_name.Name = "person_name";
             this.person_name.Size = new System.Drawing.Size(338, 36);
             this.person_name.TabIndex = 0;
@@ -68,7 +68,7 @@
             this.employee_name.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.employee_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.employee_name.ItemHeight = 30;
-            this.employee_name.Location = new System.Drawing.Point(173, 238);
+            this.employee_name.Location = new System.Drawing.Point(64, 239);
             this.employee_name.Name = "employee_name";
             this.employee_name.Size = new System.Drawing.Size(338, 36);
             this.employee_name.TabIndex = 1;
@@ -83,7 +83,7 @@
             this.employee_role.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.employee_role.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.employee_role.ItemHeight = 30;
-            this.employee_role.Location = new System.Drawing.Point(173, 329);
+            this.employee_role.Location = new System.Drawing.Point(64, 330);
             this.employee_role.Name = "employee_role";
             this.employee_role.Size = new System.Drawing.Size(338, 36);
             this.employee_role.TabIndex = 2;
@@ -98,7 +98,7 @@
             this.produs_name.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.produs_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.produs_name.ItemHeight = 30;
-            this.produs_name.Location = new System.Drawing.Point(173, 526);
+            this.produs_name.Location = new System.Drawing.Point(64, 527);
             this.produs_name.Name = "produs_name";
             this.produs_name.Size = new System.Drawing.Size(338, 36);
             this.produs_name.TabIndex = 3;
@@ -113,7 +113,7 @@
             this.tip_produs.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.tip_produs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.tip_produs.ItemHeight = 30;
-            this.tip_produs.Location = new System.Drawing.Point(688, 145);
+            this.tip_produs.Location = new System.Drawing.Point(579, 146);
             this.tip_produs.Name = "tip_produs";
             this.tip_produs.Size = new System.Drawing.Size(338, 36);
             this.tip_produs.TabIndex = 4;
@@ -129,10 +129,10 @@
             this.price.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.price.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.price.Location = new System.Drawing.Point(688, 263);
+            this.price.Location = new System.Drawing.Point(579, 264);
             this.price.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.price.Name = "price";
-            this.price.PlaceholderText = "";
+            this.price.PlaceholderText = "100.00$";
             this.price.SelectedText = "";
             this.price.Size = new System.Drawing.Size(338, 77);
             this.price.TabIndex = 5;
@@ -147,7 +147,7 @@
             this.order_status.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.order_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.order_status.ItemHeight = 30;
-            this.order_status.Location = new System.Drawing.Point(688, 426);
+            this.order_status.Location = new System.Drawing.Point(579, 427);
             this.order_status.Name = "order_status";
             this.order_status.Size = new System.Drawing.Size(338, 36);
             this.order_status.TabIndex = 6;
@@ -162,7 +162,7 @@
             this.payment_status.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.payment_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.payment_status.ItemHeight = 30;
-            this.payment_status.Location = new System.Drawing.Point(688, 526);
+            this.payment_status.Location = new System.Drawing.Point(579, 527);
             this.payment_status.Name = "payment_status";
             this.payment_status.Size = new System.Drawing.Size(338, 36);
             this.payment_status.TabIndex = 7;
@@ -177,7 +177,7 @@
             this.payment_method.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.payment_method.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.payment_method.ItemHeight = 30;
-            this.payment_method.Location = new System.Drawing.Point(1259, 145);
+            this.payment_method.Location = new System.Drawing.Point(1150, 146);
             this.payment_method.Name = "payment_method";
             this.payment_method.Size = new System.Drawing.Size(338, 36);
             this.payment_method.TabIndex = 8;
@@ -194,12 +194,13 @@
             this.notes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.notes.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.notes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.notes.Location = new System.Drawing.Point(1259, 206);
+            this.notes.Location = new System.Drawing.Point(1158, 248);
             this.notes.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.notes.Multiline = true;
             this.notes.Name = "notes";
-            this.notes.PlaceholderText = "";
+            this.notes.PlaceholderText = "write your notes";
             this.notes.SelectedText = "";
-            this.notes.Size = new System.Drawing.Size(338, 256);
+            this.notes.Size = new System.Drawing.Size(330, 256);
             this.notes.TabIndex = 9;
             // 
             // data
@@ -207,7 +208,7 @@
             this.data.Checked = true;
             this.data.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.data.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.data.Location = new System.Drawing.Point(173, 426);
+            this.data.Location = new System.Drawing.Point(64, 427);
             this.data.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.data.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.data.Name = "data";
@@ -223,7 +224,7 @@
             this.Add.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Add.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Add.ForeColor = System.Drawing.Color.White;
-            this.Add.Location = new System.Drawing.Point(1266, 508);
+            this.Add.Location = new System.Drawing.Point(1158, 527);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(330, 53);
             this.Add.TabIndex = 11;
@@ -232,7 +233,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(760, 81);
+            this.label1.Location = new System.Drawing.Point(651, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 25);
             this.label1.TabIndex = 12;
@@ -242,7 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1833, 771);
+            this.ClientSize = new System.Drawing.Size(1599, 771);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.data);

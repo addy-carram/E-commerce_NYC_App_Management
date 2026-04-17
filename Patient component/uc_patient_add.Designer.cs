@@ -80,7 +80,7 @@
             this.first_name.Location = new System.Drawing.Point(88, 205);
             this.first_name.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.first_name.Name = "first_name";
-            this.first_name.PlaceholderText = "";
+            this.first_name.PlaceholderText = "ex: Cebotari";
             this.first_name.SelectedText = "";
             this.first_name.Size = new System.Drawing.Size(371, 58);
             this.first_name.TabIndex = 2;
@@ -99,7 +99,7 @@
             this.last_name.Location = new System.Drawing.Point(87, 325);
             this.last_name.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.last_name.Name = "last_name";
-            this.last_name.PlaceholderText = "";
+            this.last_name.PlaceholderText = "ex: Elina";
             this.last_name.SelectedText = "";
             this.last_name.Size = new System.Drawing.Size(371, 58);
             this.last_name.TabIndex = 3;
@@ -118,7 +118,7 @@
             this.phone.Location = new System.Drawing.Point(87, 558);
             this.phone.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.phone.Name = "phone";
-            this.phone.PlaceholderText = "";
+            this.phone.PlaceholderText = "ex: 012301238";
             this.phone.SelectedText = "";
             this.phone.Size = new System.Drawing.Size(371, 58);
             this.phone.TabIndex = 4;
@@ -137,7 +137,7 @@
             this.email.Location = new System.Drawing.Point(537, 89);
             this.email.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.email.Name = "email";
-            this.email.PlaceholderText = "";
+            this.email.PlaceholderText = "ex: elinacebotari@gmail.com";
             this.email.SelectedText = "";
             this.email.Size = new System.Drawing.Size(371, 58);
             this.email.TabIndex = 5;
@@ -156,7 +156,7 @@
             this.adress.Location = new System.Drawing.Point(537, 209);
             this.adress.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.adress.Name = "adress";
-            this.adress.PlaceholderText = "";
+            this.adress.PlaceholderText = "ex: Via San Cosmo fuori Porta Nolana 170";
             this.adress.SelectedText = "";
             this.adress.Size = new System.Drawing.Size(371, 58);
             this.adress.TabIndex = 6;
@@ -175,7 +175,7 @@
             this.city.Location = new System.Drawing.Point(537, 330);
             this.city.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.city.Name = "city";
-            this.city.PlaceholderText = "";
+            this.city.PlaceholderText = "ex: Milano";
             this.city.SelectedText = "";
             this.city.Size = new System.Drawing.Size(371, 58);
             this.city.TabIndex = 7;
@@ -194,7 +194,7 @@
             this.country.Location = new System.Drawing.Point(537, 442);
             this.country.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.country.Name = "country";
-            this.country.PlaceholderText = "";
+            this.country.PlaceholderText = "ex: Italy";
             this.country.SelectedText = "";
             this.country.Size = new System.Drawing.Size(371, 58);
             this.country.TabIndex = 8;
@@ -261,7 +261,7 @@
             this.idnp.Location = new System.Drawing.Point(88, 89);
             this.idnp.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.idnp.Name = "idnp";
-            this.idnp.PlaceholderText = "";
+            this.idnp.PlaceholderText = "ex: 1005400126330";
             this.idnp.SelectedText = "";
             this.idnp.Size = new System.Drawing.Size(371, 58);
             this.idnp.TabIndex = 12;

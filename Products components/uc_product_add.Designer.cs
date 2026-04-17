@@ -57,7 +57,7 @@
             this.producer.Location = new System.Drawing.Point(103, 133);
             this.producer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.producer.Name = "producer";
-            this.producer.PlaceholderText = "";
+            this.producer.PlaceholderText = "ex: Gucci";
             this.producer.SelectedText = "";
             this.producer.Size = new System.Drawing.Size(371, 58);
             this.producer.TabIndex = 16;
@@ -76,7 +76,7 @@
             this.model_name.Location = new System.Drawing.Point(103, 244);
             this.model_name.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.model_name.Name = "model_name";
-            this.model_name.PlaceholderText = "";
+            this.model_name.PlaceholderText = "ex: UK123Comfy";
             this.model_name.SelectedText = "";
             this.model_name.Size = new System.Drawing.Size(371, 58);
             this.model_name.TabIndex = 17;
@@ -95,7 +95,7 @@
             this.total_price.Location = new System.Drawing.Point(696, 143);
             this.total_price.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.total_price.Name = "total_price";
-            this.total_price.PlaceholderText = "";
+            this.total_price.PlaceholderText = "860.00$";
             this.total_price.SelectedText = "";
             this.total_price.Size = new System.Drawing.Size(371, 58);
             this.total_price.TabIndex = 19;
@@ -212,7 +212,7 @@
             this.stock_quantity.Location = new System.Drawing.Point(696, 244);
             this.stock_quantity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.stock_quantity.Name = "stock_quantity";
-            this.stock_quantity.PlaceholderText = "";
+            this.stock_quantity.PlaceholderText = "200";
             this.stock_quantity.SelectedText = "";
             this.stock_quantity.Size = new System.Drawing.Size(371, 58);
             this.stock_quantity.TabIndex = 34;
