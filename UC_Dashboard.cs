@@ -21,5 +21,11 @@ namespace e_commerce_NYC
         {
 
         }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        
     }
 }

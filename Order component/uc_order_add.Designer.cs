@@ -63,7 +63,7 @@
             this.person_name.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.person_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.person_name.ItemHeight = 30;
-            this.person_name.Location = new System.Drawing.Point(67, 197);
+            this.person_name.Location = new System.Drawing.Point(67, 169);
             this.person_name.Name = "person_name";
             this.person_name.Size = new System.Drawing.Size(409, 36);
             this.person_name.TabIndex = 0;
@@ -109,7 +109,7 @@
             this.price.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.price.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.price.Location = new System.Drawing.Point(564, 197);
+            this.price.Location = new System.Drawing.Point(564, 169);
             this.price.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.price.Name = "price";
             this.price.PlaceholderText = "100.00$";
@@ -175,13 +175,13 @@
             this.notes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.notes.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.notes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.notes.Location = new System.Drawing.Point(1089, 197);
+            this.notes.Location = new System.Drawing.Point(1089, 169);
             this.notes.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.notes.Multiline = true;
             this.notes.Name = "notes";
             this.notes.PlaceholderText = "write your notes";
             this.notes.SelectedText = "";
-            this.notes.Size = new System.Drawing.Size(338, 279);
+            this.notes.Size = new System.Drawing.Size(338, 307);
             this.notes.TabIndex = 9;
             // 
             // data
@@ -216,7 +216,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(569, 93);
+            this.label1.Location = new System.Drawing.Point(570, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(287, 42);
             this.label1.TabIndex = 12;
@@ -226,18 +226,19 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel1.Location = new System.Drawing.Point(62, 236);
+            this.linkLabel1.Location = new System.Drawing.Point(62, 254);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(150, 25);
             this.linkLabel1.TabIndex = 13;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Don\'t find, add";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel2.Location = new System.Drawing.Point(62, 590);
+            this.linkLabel2.Location = new System.Drawing.Point(62, 623);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(182, 25);
             this.linkLabel2.TabIndex = 14;
@@ -247,7 +248,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(62, 169);
+            this.label2.Location = new System.Drawing.Point(62, 141);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 25);
             this.label2.TabIndex = 15;
@@ -256,7 +257,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(559, 169);
+            this.label3.Location = new System.Drawing.Point(559, 141);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 25);
             this.label3.TabIndex = 16;
@@ -265,7 +266,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1084, 169);
+            this.label4.Location = new System.Drawing.Point(1084, 141);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 25);
             this.label4.TabIndex = 17;

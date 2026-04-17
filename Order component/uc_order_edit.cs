@@ -113,7 +113,7 @@ namespace e_commerce_NYC.Order_component
                 MessageBox.Show("Problem to acces data from database" + ex.Message);
             }
         }
-        private void LoadOrders()
+        public void LoadOrders()
         {
             try
             {
@@ -135,7 +135,7 @@ namespace e_commerce_NYC.Order_component
                         price.Text = reader["total_amount"].ToString();
                         payment_method.SelectedValue = reader["id_payment_method"].ToString();
                         payment_status.SelectedValue = reader["id_payment_status"].ToString();
-                        order_status.SelectedValue = reader["id_order"].ToString();
+                        order_status.SelectedValue = reader["id_order_status"].ToString();
                         notes.Text = reader["notes"].ToString();
                     }
                     else
@@ -191,5 +191,15 @@ namespace e_commerce_NYC.Order_component
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+        }
+        public void SetButtonText(string text)
+        {
+            Add.Text = text;
+        }
+
     }
 }

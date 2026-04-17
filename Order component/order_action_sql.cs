@@ -9,13 +9,13 @@ using System.Windows.Forms;
 
 namespace e_commerce_NYC.Order_component
 {
-    public  class order_action_sql
+    public class order_action_sql
     {
         string connStr = @"Data Source=Adina\SQLEXPRESS;Initial Catalog=EUROPTICA;Integrated Security=True";
-        public void AddOrder (Order o)
+        public void AddOrder(Order o)
         {
             int deleteid;
-            
+
             try
             {
                 DialogResult result = MessageBox.Show(
@@ -54,7 +54,7 @@ namespace e_commerce_NYC.Order_component
         }
         public void DeleteOrder(int id)
         {
-            
+
             try
             {
                 DialogResult result = MessageBox.Show(
@@ -78,7 +78,7 @@ namespace e_commerce_NYC.Order_component
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("error" + ex.Message);
             }
@@ -126,7 +126,7 @@ namespace e_commerce_NYC.Order_component
 
                         int rows = cmd.ExecuteNonQuery();
 
-                        
+
                     }
                 }
             }
@@ -138,5 +138,47 @@ namespace e_commerce_NYC.Order_component
 
 
         }
+        public void CancelOrder(int id)
+        {
+            try
+            {
+                
+                    using (SqlConnection conn = new SqlConnection(connStr))
+                    {
+                        conn.Open();
+                        string query = "UPDATE Order_Table SET id_order_status = 5 WHERE id_order = @id";
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@id", id);
+                        cmd.ExecuteNonQuery();
+                    }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error" + ex.Message);
+            }
+        }
+        public void UNCancelOrder(int id)
+        {
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
+                    string query = "UPDATE Order_Table SET id_order_status = 3 WHERE id_order = @id";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error" + ex.Message);
+            }
+        }
     }
+
+        
 }

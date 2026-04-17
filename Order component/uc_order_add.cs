@@ -188,5 +188,16 @@ namespace e_commerce_NYC.Order_component
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            uc_patient_add addp = new uc_patient_add();
+            if (addp.ShowDialog() == DialogResult.OK)
+            {
+                
+                MessageBox.Show("Custumer added");
+
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using e_commerce_NYC.Order_component;
+using e_commerce_NYC.Products_components;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace e_commerce_NYC
 {
     public partial class UC_Orders : UserControl
     {
-        private DataTable fullData, fullData2, fullData3, fullData4;
+        private DataTable fullData, fullData2, fullData3, fullData4, fullData5;
         private int pageSize = 10;
         private int currentPage = 0;
         public UC_Orders()
@@ -27,6 +28,7 @@ namespace e_commerce_NYC
             LoadTable2();
             LoadOrderProcessing();
             LoadOrderRefund();
+            LoadOrdersCancelled();
             LoadAnalytics();
             LoadPaymentMethodChart();
             LoadOrdersByYearChart();
@@ -52,6 +54,7 @@ namespace e_commerce_NYC
                         " JOIN Order_Status os ON o.id_order_status = os.id_order_status " +
                         " JOIN Payment_Status ps ON o.id_payment_status = ps.id_payment_status" +
                         " JOIN Payment_Method pm ON o.id_payment_method=pm.id_payment_method" +
+                        " WHERE os.status_name <> 'cancelled'" +
                         " ORDER BY o.id_order DESC;", conn);
 
                     fullData = new DataTable();
@@ -67,7 +70,7 @@ namespace e_commerce_NYC
                         new DataGridViewButtonColumn();
                     deleteBtn.Name = "btnDelete";
                     deleteBtn.HeaderText = "";
-                    deleteBtn.Text = "Delete";
+                    deleteBtn.Text = "Cancel";
                     deleteBtn.UseColumnTextForButtonValue = true;
                     deleteBtn.Width = 80;
 
@@ -79,6 +82,53 @@ namespace e_commerce_NYC
 
                     guna2DataGridView1.Columns.Add(deleteBtn);
                     guna2DataGridView1.Columns.Add(editBtn);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading orders: " + ex.Message);
+            }
+        }
+        private void LoadOrdersCancelled()
+        {
+            try
+            {
+                string connStr = @"Data Source=Adina\SQLEXPRESS;Initial Catalog=EUROPTICA;Integrated Security=True";
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(
+                        @"SELECT   o.id_order,  p.first_name + ' ' + p.last_name AS client,e.first_name+' '+e.last_name AS employee," +
+                        "er.role_name AS role, prod.model_name AS produs,  pt.type_name AS tip_produs,  o.total_amount AS pret,  " +
+                        " os.status_name AS status,   ps.status_name AS plata,pm.method_name AS metoda" +
+                        " FROM Order_Table o" +
+                        " JOIN Employee e ON o.id_employee=e.id_employee" +
+                        " JOIN Employee_Role er ON e.id_role=er.id_role " +
+                        " JOIN Patient p ON o.id_patient = p.id_patient " +
+                        " JOIN Product prod ON o.id_product = prod.id_product " +
+                        " JOIN Product_Type pt ON prod.id_product_type = pt.id_product_type" +
+                        " JOIN Order_Status os ON o.id_order_status = os.id_order_status " +
+                        " JOIN Payment_Status ps ON o.id_payment_status = ps.id_payment_status" +
+                        " JOIN Payment_Method pm ON o.id_payment_method=pm.id_payment_method" +
+                        " WHERE os.status_name = 'cancelled'" +
+                        " ORDER BY o.id_order ;", conn);
+
+                    fullData5= new DataTable();
+                    adapter.Fill(fullData5);
+                    guna2DataGridView5.DataSource = fullData5;
+                }
+                if (!guna2DataGridView5.Columns.Contains("btnDelete"))
+                {
+                    DataGridViewButtonColumn deleteBtn =
+                        new DataGridViewButtonColumn();
+                    DataGridViewButtonColumn editBtn =
+                        new DataGridViewButtonColumn();
+                    deleteBtn.Name = "btnDelete";
+                    deleteBtn.HeaderText = "";
+                    deleteBtn.Text = "Uncancelled";
+                    deleteBtn.UseColumnTextForButtonValue = true;
+                    deleteBtn.Width = 80;
+                    guna2DataGridView5.Columns.Add(deleteBtn);
                 }
             }
             catch (Exception ex)
@@ -122,18 +172,12 @@ namespace e_commerce_NYC
                         new DataGridViewButtonColumn();
                     deleteBtn.Name = "btnDelete";
                     deleteBtn.HeaderText = "";
-                    deleteBtn.Text = "Delete";
+                    deleteBtn.Text = "Contact";
                     deleteBtn.UseColumnTextForButtonValue = true;
                     deleteBtn.Width = 80;
 
-                    editBtn.Name = "btnEdit";
-                    editBtn.HeaderText = "";
-                    editBtn.Text = "Edit";
-                    editBtn.UseColumnTextForButtonValue = true;
-                    editBtn.Width = 80;
 
-                    guna2DataGridView4.Columns.Add(deleteBtn);
-                    guna2DataGridView4.Columns.Add(editBtn);
+                    guna2DataGridView3.Columns.Add(deleteBtn);
                 }
             }
             catch (Exception ex)
@@ -177,18 +221,11 @@ namespace e_commerce_NYC
                         new DataGridViewButtonColumn();
                     deleteBtn.Name = "btnDelete";
                     deleteBtn.HeaderText = "";
-                    deleteBtn.Text = "Delete";
+                    deleteBtn.Text = "Contact";
                     deleteBtn.UseColumnTextForButtonValue = true;
                     deleteBtn.Width = 80;
 
-                    editBtn.Name = "btnEdit";
-                    editBtn.HeaderText = "";
-                    editBtn.Text = "Edit";
-                    editBtn.UseColumnTextForButtonValue = true;
-                    editBtn.Width = 80;
-
                     guna2DataGridView4.Columns.Add(deleteBtn);
-                    guna2DataGridView4.Columns.Add(editBtn);
                 }
             }
             catch (Exception ex)
@@ -266,6 +303,7 @@ namespace e_commerce_NYC
                                     " JOIN Order_Status os ON o.id_order_status = os.id_order_status " +
                                     " JOIN Payment_Status ps ON o.id_payment_status = ps.id_payment_status" +
                                     " JOIN Payment_Method pm ON o.id_payment_method=pm.id_payment_method" +
+                                    " WHERE os.status_name <> 'cancelled'" +
                                     " Order by client", conn);
 
                                 DataTable dt = new DataTable();
@@ -292,6 +330,7 @@ namespace e_commerce_NYC
                                     " JOIN Order_Status os ON o.id_order_status = os.id_order_status " +
                                     " JOIN Payment_Status ps ON o.id_payment_status = ps.id_payment_status" +
                                     " JOIN Payment_Method pm ON o.id_payment_method=pm.id_payment_method" +
+                                    " WHERE os.status_name <> 'cancelled'" +
                                     " Order by employee", conn);
 
                                 DataTable dt = new DataTable();
@@ -318,6 +357,7 @@ namespace e_commerce_NYC
                                     " JOIN Order_Status os ON o.id_order_status = os.id_order_status " +
                                     " JOIN Payment_Status ps ON o.id_payment_status = ps.id_payment_status" +
                                     " JOIN Payment_Method pm ON o.id_payment_method=pm.id_payment_method" +
+                                    " WHERE os.status_name <> 'cancelled'" +
                                     " Order by plata", conn);
 
                                 DataTable dt = new DataTable();
@@ -470,6 +510,175 @@ namespace e_commerce_NYC
                 MessageBox.Show("error" + ex.Message);
             }
 
+        }
+
+        private void guna2DataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (guna2DataGridView5.Columns[e.ColumnIndex].Name == "btnDelete")
+                {
+                    int id = Convert.ToInt32(guna2DataGridView5.Rows[e.RowIndex].Cells["id_order"].Value);
+                    try
+                    {
+                        DialogResult confirm = MessageBox.Show(
+                        "Are you sure you want to uncancel?",
+                        "Confirm",
+                        MessageBoxButtons.YesNo);
+
+                        if (confirm == DialogResult.Yes)
+                        {
+
+                            order_action_sql repo = new order_action_sql();
+                            repo.UNCancelOrder(id);
+                            LoadOrders();
+                            LoadOrdersCancelled();
+                            MessageBox.Show("Order canceled successfully!");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void guna2DataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (guna2DataGridView3.Columns[e.ColumnIndex].Name == "btnDelete")
+                {
+                    int id = Convert.ToInt32(guna2DataGridView3.Rows[e.RowIndex].Cells["id_order"].Value);
+                    try
+                    {
+                        DialogResult confirm = MessageBox.Show(
+                        "Are you sure you want to call?",
+                        "Confirm",
+                        MessageBoxButtons.YesNo);
+
+                        if (confirm == DialogResult.Yes)
+                        {
+
+                            uc_order_edit epp = new uc_order_edit(id);
+                            epp.SetButtonText("Call");
+
+                            if (epp.ShowDialog() == DialogResult.OK)
+                            {
+                                MessageBox.Show("Order canceled successfully!");
+                            }
+                            
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void guna2DataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (guna2DataGridView4.Columns[e.ColumnIndex].Name == "btnDelete")
+                {
+                    int id = Convert.ToInt32(guna2DataGridView4.Rows[e.RowIndex].Cells["id_order"].Value);
+                    try
+                    {
+                        DialogResult confirm = MessageBox.Show(
+                        "Are you sure you want to call?",
+                        "Confirm",
+                        MessageBoxButtons.YesNo);
+
+                        if (confirm == DialogResult.Yes)
+                        {
+
+                            uc_order_edit epp = new uc_order_edit(id);
+                            epp.SetButtonText("Call");
+
+                            if (epp.ShowDialog() == DialogResult.OK)
+                            {
+                                MessageBox.Show("Order canceled successfully!");
+                            }
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    if (guna2DataGridView1.Columns[e.ColumnIndex].Name == "btnDelete")
+                    {
+                        int id = Convert.ToInt32(guna2DataGridView1.Rows[e.RowIndex].Cells["id_order"].Value);
+                        try
+                        {
+                            DialogResult confirm = MessageBox.Show(
+                            "Are you sure you want to cancel?",
+                            "Confirm",
+                            MessageBoxButtons.YesNo);
+
+                            if (confirm == DialogResult.Yes)
+                            {
+
+                                order_action_sql repo = new order_action_sql();
+                                repo.CancelOrder(id);
+                                LoadOrders();
+                                LoadOrdersCancelled();
+                                MessageBox.Show("Order canceled successfully!");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
+                    else if (guna2DataGridView1.Columns[e.ColumnIndex].Name == "btnEdit")
+                    {
+                        try
+                        {
+                            DialogResult confirm = MessageBox.Show(
+                            "Are you sure you want to edit?",
+                            "Confirm",
+                            MessageBoxButtons.YesNo);
+
+                            if (confirm == DialogResult.Yes)
+                            {
+
+                                int id = Convert.ToInt32(guna2DataGridView1.Rows[e.RowIndex].Cells["id_order"].Value);
+                                uc_order_edit editForm = new uc_order_edit(id);
+
+                                if (editForm.ShowDialog() == DialogResult.OK)
+                                {
+
+                                    LoadOrders();
+                                    MessageBox.Show("Order edited successfully!");
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         /// <summary>

@@ -29,7 +29,7 @@ namespace e_commerce_NYC
             LoadTopOrder();
             LoadAnalist();
         }
-        private void LoadPatients()
+  public void LoadPatients()
         {
             string connSr = @"Data Source = Adina\SQLEXPRESS; Initial Catalog = EUROPTICA; Integrated Security=True; TrustServerCertificate=True";
             using(SqlConnection conn = new SqlConnection(connSr))
@@ -452,6 +452,12 @@ namespace e_commerce_NYC
 
             chart2.Series.Add(series);
         }
+
+        private void panelCard1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void LoadAnalist()
         {
             string connectionString = @"Data Source=Adina\SQLEXPRESS;Initial Catalog=EUROPTICA;Integrated Security=True;TrustServerCertificate=True";
