@@ -207,6 +207,7 @@ namespace e_commerce_NYC
                     LoadOrders();
                     LoadOrderProcessing();
                     LoadOrderRefund();
+                    MessageBox.Show("Order successufully added");
                 }
 
             }
@@ -427,6 +428,50 @@ namespace e_commerce_NYC
             }
         
         }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                uc_order_edit_id editpage = new uc_order_edit_id();
+                if(editpage.ShowDialog() != DialogResult.OK)
+                {
+                    LoadOrders();
+                    LoadOrderProcessing();
+                    LoadOrderRefund();
+                }
+
+
+
+
+            } catch(Exception ex)
+            {
+                MessageBox.Show("error" + ex.Message);
+            }
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                uc_order_delete deletepage = new uc_order_delete();
+                if(deletepage.ShowDialog() == DialogResult.OK)
+                {
+                    LoadOrders();
+                    LoadOrderProcessing();
+                    LoadOrderRefund();
+                    MessageBox.Show("Order successufully deleted");
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("error" + ex.Message);
+            }
+
+        }
+
         /// <summary>
         /// method of payment of our client 
         /// </summary>

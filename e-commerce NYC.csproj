@@ -54,7 +54,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Order component\Order.cs" />
     <Compile Include="Order component\order_action_sql.cs" />
     <Compile Include="Order component\uc_order_add.cs">
       <SubType>Form</SubType>
@@ -80,6 +79,7 @@
     <Compile Include="Order component\uc_order_edit_id.Designer.cs">
       <DependentUpon>uc_order_edit_id.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order component\Order.cs" />
     <Compile Include="Patient component\uc_patient_edit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Order component\uc_order_delete.resx">
       <DependentUpon>uc_order_delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order component\uc_order_edit.resx">
+      <DependentUpon>uc_order_edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Order component\uc_order_edit_id.resx">
       <DependentUpon>uc_order_edit_id.cs</DependentUpon>

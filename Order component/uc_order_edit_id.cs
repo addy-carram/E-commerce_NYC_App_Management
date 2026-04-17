@@ -16,5 +16,31 @@ namespace e_commerce_NYC.Order_component
         {
             InitializeComponent();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(guna2TextBox1.Text))
+                {
+                    MessageBox.Show("fill the textbox");
+                }
+                if(!int.TryParse(guna2TextBox1.Text,out int id))
+                {
+                    MessageBox.Show("Please enter a valid id.");
+                    return;
+                }
+                uc_order_edit editpage =new uc_order_edit(id);
+                if (editpage.ShowDialog() == DialogResult.OK)
+                {
+                    this.Close();
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("error " + ex.Message);
+            }
+        }
     }
 }

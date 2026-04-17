@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace e_commerce_NYC.order_component
+namespace e_commerce_NYC
 {
     public class Order
     {
@@ -14,9 +14,9 @@ namespace e_commerce_NYC.order_component
         public int id_employee { get; set; }
         public DateTime order_date { get; set; }
         public int id_order_status { get; set; }
-        public int total_amount { get; set; }
+        public decimal total_amount { get; set; }
         public int id_payment_status { get; set; }
-        public int id_payment_methods { get; set; }
+        public int id_payment_method { get; set; }
         public string notes { get; set; }
     }
 }
