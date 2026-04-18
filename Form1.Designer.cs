@@ -419,6 +419,8 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(317, 93);
             this.panel8.TabIndex = 18;
+            this.panel8.Click += new System.EventHandler(this.panel8_Click);
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // label64
             // 
@@ -592,6 +594,7 @@
             this.user.Size = new System.Drawing.Size(225, 68);
             this.user.TabIndex = 7;
             this.user.Text = "Account";
+            this.user.TextOffset = new System.Drawing.Point(20, 0);
             this.user.Click += new System.EventHandler(this.user_Click);
             // 
             // pictureBox13

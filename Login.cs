@@ -89,5 +89,39 @@ namespace e_commerce_NYC
             this.FindForm().Hide(); // or this.Close() if you want to close the login form
 
         }
+
+        private void enter_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(string.IsNullOrWhiteSpace(guna2TextBox1.Text) || string .IsNullOrWhiteSpace(maskedTextBox1.Text)||
+                    string.IsNullOrWhiteSpace(guna2ComboBox1.Text))
+                {
+                    MessageBox.Show("Pleaase fill in all fields.");
+                }
+
+                UserSession.Role = guna2ComboBox1.Text;
+
+                Form1 dashboard = new Form1();
+                dashboard.Show();
+                this.Hide();
+
+            }
+            catch( Exception ex)
+            {
+                MessageBox.Show(" An error occurred:" + ex.Message);
+            }
+            
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

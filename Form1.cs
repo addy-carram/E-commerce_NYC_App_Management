@@ -16,7 +16,7 @@ namespace e_commerce_NYC
         public Form1()
         {
             InitializeComponent();
-            ShowPage(new UC_Dashboard());
+            HideMenuByRole();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -141,6 +141,50 @@ namespace e_commerce_NYC
         private void user_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void panel8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void HideMenuByRole()
+        {
+            if (UserSession.Role == "Employee")
+            {
+                panel16.Visible = false; 
+                panel11.Visible = false; 
+            }
+
+            else if (UserSession.Role == "Manager")
+            {
+                panel16.Visible = false;
+                panel11.Visible = false;
+            }
+            else if(UserSession.Role == "HR")
+            {
+                panel11.Visible = false;
+                panel18.Visible = false;
+                panel17.Visible = false;
+                panel15.Visible = false;
+            }
+
+           
         }
     }
 }
