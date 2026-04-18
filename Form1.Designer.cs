@@ -68,7 +68,6 @@
             this.panelMain = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.user = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.dataSet1 = new System.Data.DataSet();
@@ -100,7 +99,6 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -566,7 +564,6 @@
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.user);
-            this.guna2Panel1.Controls.Add(this.pictureBox13);
             this.guna2Panel1.Controls.Add(this.pictureBox12);
             this.guna2Panel1.Controls.Add(this.pictureBox11);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -596,18 +593,6 @@
             this.user.Text = "Account";
             this.user.TextOffset = new System.Drawing.Point(20, 0);
             this.user.Click += new System.EventHandler(this.user_Click);
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(903, 25);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(6);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(80, 50);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 4;
-            this.pictureBox13.TabStop = false;
             // 
             // pictureBox12
             // 
@@ -683,7 +668,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
@@ -726,7 +710,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox13;
         private Guna.UI2.WinForms.Guna2Button user;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Panel panel2;

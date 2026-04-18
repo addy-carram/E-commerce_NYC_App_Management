@@ -30,17 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.component_label1 = new e_commerce_NYC.Models.Component_label(this.components);
-            this.component_label2 = new e_commerce_NYC.Models.Component_label(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.enter = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -69,7 +67,11 @@
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
+            this.enter = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.component_label1 = new e_commerce_NYC.Models.Component_label(this.components);
+            this.component_label2 = new e_commerce_NYC.Models.Component_label(this.components);
             this.guna2Panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -93,6 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.guna2Panel5.SuspendLayout();
+            this.guna2Panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -132,9 +135,9 @@
             // 
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Controls.Add(this.enter, 0, 2);
             this.tableLayoutPanel7.Controls.Add(this.guna2Panel8, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.guna2Panel9, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.guna2Panel10, 0, 2);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -144,24 +147,6 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(875, 881);
             this.tableLayoutPanel7.TabIndex = 0;
-            // 
-            // enter
-            // 
-            this.enter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.enter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.enter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.enter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.enter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.enter.Font = new System.Drawing.Font("Power Grotesk Trial", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enter.ForeColor = System.Drawing.Color.White;
-            this.enter.Location = new System.Drawing.Point(200, 619);
-            this.enter.Margin = new System.Windows.Forms.Padding(200, 3, 200, 3);
-            this.enter.Name = "enter";
-            this.enter.Size = new System.Drawing.Size(475, 106);
-            this.enter.TabIndex = 24;
-            this.enter.Text = "Log in";
-            this.enter.Click += new System.EventHandler(this.enter_Click);
             // 
             // guna2Panel8
             // 
@@ -213,6 +198,26 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(869, 346);
             this.guna2GroupBox1.TabIndex = 25;
             // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(248, 59);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(200, 6, 200, 6);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(371, 39);
+            this.guna2TextBox1.TabIndex = 20;
+            // 
             // label13
             // 
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -263,8 +268,7 @@
             this.guna2ComboBox1.Items.AddRange(new object[] {
             "Admin",
             "HR",
-            "Manager",
-            "Employee"});
+            "Manager"});
             this.guna2ComboBox1.Location = new System.Drawing.Point(246, 249);
             this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(200, 6, 200, 6);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
@@ -551,25 +555,44 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "Track your orders";
             // 
-            // guna2TextBox1
+            // guna2Panel10
             // 
-            this.guna2TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(248, 59);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(200, 6, 200, 6);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(371, 39);
-            this.guna2TextBox1.TabIndex = 20;
+            this.guna2Panel10.Controls.Add(this.label1);
+            this.guna2Panel10.Controls.Add(this.enter);
+            this.guna2Panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel10.Location = new System.Drawing.Point(3, 619);
+            this.guna2Panel10.Name = "guna2Panel10";
+            this.guna2Panel10.Size = new System.Drawing.Size(869, 259);
+            this.guna2Panel10.TabIndex = 2;
+            // 
+            // enter
+            // 
+            this.enter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.enter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.enter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.enter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.enter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.enter.Font = new System.Drawing.Font("Power Grotesk Trial", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enter.ForeColor = System.Drawing.Color.White;
+            this.enter.Location = new System.Drawing.Point(194, 13);
+            this.enter.Margin = new System.Windows.Forms.Padding(200, 3, 200, 3);
+            this.enter.Name = "enter";
+            this.enter.Size = new System.Drawing.Size(475, 106);
+            this.enter.TabIndex = 25;
+            this.enter.Text = "Log in";
+            this.enter.Click += new System.EventHandler(this.enter_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Power Grotesk Trial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(187, 146);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(502, 38);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Don\'t have an account? Register";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Login
             // 
@@ -614,6 +637,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
+            this.guna2Panel10.ResumeLayout(false);
+            this.guna2Panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -657,8 +682,10 @@
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private Guna.UI2.WinForms.Guna2Button enter;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Button enter;
     }
 }
 

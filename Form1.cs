@@ -13,12 +13,17 @@ namespace e_commerce_NYC
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private string userRole;
+
+        public Form1(string role)
         {
             InitializeComponent();
-            HideMenuByRole();
+            userRole = role;
         }
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ApplyPermissions();
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -53,13 +58,6 @@ namespace e_commerce_NYC
         {
 
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-           
-
-        }
-
         private void tableLayoutPanel14_Paint(object sender, PaintEventArgs e)
         {
 
@@ -163,28 +161,25 @@ namespace e_commerce_NYC
                 MessageBox.Show(ex.Message);
             }
         }
-        private void HideMenuByRole()
+        
+        private void ApplyPermissions()
         {
-            if (UserSession.Role == "Employee")
+            if (userRole == "admin")
             {
-                panel16.Visible = false; 
-                panel11.Visible = false; 
+                
             }
-
-            else if (UserSession.Role == "Manager")
+            else if (userRole == "manager")
             {
                 panel16.Visible = false;
                 panel11.Visible = false;
             }
-            else if(UserSession.Role == "HR")
+            else if (userRole == "hr")
             {
                 panel11.Visible = false;
                 panel18.Visible = false;
                 panel17.Visible = false;
                 panel15.Visible = false;
             }
-
-           
         }
     }
 }
