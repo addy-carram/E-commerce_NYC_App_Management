@@ -54,6 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Role\HashHelper.cs" />
+    <Compile Include="Role\DbConnection.cs" />
     <Compile Include="Order component\order_action_sql.cs" />
     <Compile Include="Order component\uc_order_add.cs">
       <SubType>Form</SubType>
@@ -133,10 +135,10 @@
     <Compile Include="Patient component\uc_patient_add.Designer.cs">
       <DependentUpon>uc_patient_add.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Role\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Role\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Component-label.cs">
@@ -177,7 +179,7 @@
     <Compile Include="Products components\uc_product_edit_id.Designer.cs">
       <DependentUpon>uc_product_edit_id.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Role\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Employee component\UC_Employee.cs">
       <SubType>UserControl</SubType>
@@ -203,6 +205,12 @@
     <Compile Include="Employee component\uc_employee_edit_id.Designer.cs">
       <DependentUpon>uc_employee_edit_id.cs</DependentUpon>
     </Compile>
+    <Compile Include="Role\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Role\RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Money.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -227,13 +235,7 @@
     <Compile Include="Products components\UC_Products.Designer.cs">
       <DependentUpon>UC_Products.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserSession.cs" />
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Role\UserSession.cs" />
     <Compile Include="UC_Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -268,7 +270,7 @@
     <EmbeddedResource Include="Patient component\uc_patient_add.resx">
       <DependentUpon>uc_patient_add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Role\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Models\Component-label.resx">
@@ -317,6 +319,9 @@
     <EmbeddedResource Include="Employee component\uc_employee_edit_id.resx">
       <DependentUpon>uc_employee_edit_id.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Role\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Money.resx">
       <DependentUpon>UC_Money.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,9 +333,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Products components\UC_Products.resx">
       <DependentUpon>UC_Products.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>

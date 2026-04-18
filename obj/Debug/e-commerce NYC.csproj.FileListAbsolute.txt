@@ -11,7 +11,6 @@ D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.pdb
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.exe.config
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.loginlabels.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Models.Component_label.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UserControl1.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Form1.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Employee.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Orders.resources
@@ -37,3 +36,4 @@ D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_o
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_order_delete.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_order_edit_id.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_order_edit.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.RegisterForm.resources
