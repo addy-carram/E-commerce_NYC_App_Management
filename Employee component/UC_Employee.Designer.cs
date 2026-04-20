@@ -66,9 +66,6 @@
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.excell = new System.Windows.Forms.Button();
-            this.pdf = new System.Windows.Forms.Button();
-            this.csv = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -112,7 +109,6 @@
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -482,48 +478,11 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.excell);
-            this.panel4.Controls.Add(this.pdf);
-            this.panel4.Controls.Add(this.csv);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(3, 672);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1644, 100);
             this.panel4.TabIndex = 13;
-            // 
-            // excell
-            // 
-            this.excell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.excell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.excell.Location = new System.Drawing.Point(1178, 33);
-            this.excell.Name = "excell";
-            this.excell.Size = new System.Drawing.Size(222, 52);
-            this.excell.TabIndex = 9;
-            this.excell.Text = "excell";
-            this.excell.UseVisualStyleBackColor = false;
-            // 
-            // pdf
-            // 
-            this.pdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pdf.Location = new System.Drawing.Point(950, 33);
-            this.pdf.Name = "pdf";
-            this.pdf.Size = new System.Drawing.Size(222, 52);
-            this.pdf.TabIndex = 8;
-            this.pdf.Text = "pdf";
-            this.pdf.UseVisualStyleBackColor = false;
-            this.pdf.Click += new System.EventHandler(this.pdf_Click);
-            // 
-            // csv
-            // 
-            this.csv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.csv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.csv.Location = new System.Drawing.Point(1406, 33);
-            this.csv.Name = "csv";
-            this.csv.Size = new System.Drawing.Size(222, 52);
-            this.csv.TabIndex = 10;
-            this.csv.Text = "csv";
-            this.csv.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -808,7 +767,6 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tabPage1.ResumeLayout(false);
@@ -848,9 +806,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn isactiveDataGridViewCheckBoxColumn;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Button csv;
-        private System.Windows.Forms.Button excell;
-        private System.Windows.Forms.Button pdf;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Panel panel4;

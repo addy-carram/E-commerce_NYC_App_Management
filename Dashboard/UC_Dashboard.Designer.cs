@@ -76,9 +76,6 @@
             this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.excell = new System.Windows.Forms.Button();
-            this.pdf = new System.Windows.Forms.Button();
-            this.csv = new System.Windows.Forms.Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -100,7 +97,6 @@
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
-            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -560,51 +556,12 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Controls.Add(this.excell);
-            this.guna2Panel2.Controls.Add(this.pdf);
-            this.guna2Panel2.Controls.Add(this.csv);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 662);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1515, 100);
             this.guna2Panel2.TabIndex = 0;
             this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
-            // 
-            // excell
-            // 
-            this.excell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.excell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.excell.Location = new System.Drawing.Point(1042, 24);
-            this.excell.Margin = new System.Windows.Forms.Padding(20);
-            this.excell.Name = "excell";
-            this.excell.Size = new System.Drawing.Size(222, 52);
-            this.excell.TabIndex = 15;
-            this.excell.Text = "excell";
-            this.excell.UseVisualStyleBackColor = false;
-            // 
-            // pdf
-            // 
-            this.pdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pdf.Location = new System.Drawing.Point(814, 24);
-            this.pdf.Margin = new System.Windows.Forms.Padding(20);
-            this.pdf.Name = "pdf";
-            this.pdf.Size = new System.Drawing.Size(222, 52);
-            this.pdf.TabIndex = 14;
-            this.pdf.Text = "pdf";
-            this.pdf.UseVisualStyleBackColor = false;
-            // 
-            // csv
-            // 
-            this.csv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.csv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.csv.Location = new System.Drawing.Point(1270, 24);
-            this.csv.Margin = new System.Windows.Forms.Padding(20);
-            this.csv.Name = "csv";
-            this.csv.Size = new System.Drawing.Size(222, 52);
-            this.csv.TabIndex = 16;
-            this.csv.Text = "csv";
-            this.csv.UseVisualStyleBackColor = false;
             // 
             // UC_Dashboard
             // 
@@ -640,7 +597,6 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
-            this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -679,8 +635,5 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private System.Windows.Forms.Button excell;
-        private System.Windows.Forms.Button pdf;
-        private System.Windows.Forms.Button csv;
     }
 }

@@ -44,9 +44,6 @@
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.excell = new System.Windows.Forms.Button();
-            this.pdf = new System.Windows.Forms.Button();
-            this.csv = new System.Windows.Forms.Button();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -85,7 +82,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.guna2Panel6.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -154,47 +150,11 @@
             // 
             // guna2Panel6
             // 
-            this.guna2Panel6.Controls.Add(this.excell);
-            this.guna2Panel6.Controls.Add(this.pdf);
-            this.guna2Panel6.Controls.Add(this.csv);
             this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Panel6.Location = new System.Drawing.Point(3, 612);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(1759, 100);
             this.guna2Panel6.TabIndex = 3;
-            // 
-            // excell
-            // 
-            this.excell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.excell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.excell.Location = new System.Drawing.Point(1253, 26);
-            this.excell.Name = "excell";
-            this.excell.Size = new System.Drawing.Size(222, 52);
-            this.excell.TabIndex = 12;
-            this.excell.Text = "excell";
-            this.excell.UseVisualStyleBackColor = false;
-            // 
-            // pdf
-            // 
-            this.pdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pdf.Location = new System.Drawing.Point(1025, 26);
-            this.pdf.Name = "pdf";
-            this.pdf.Size = new System.Drawing.Size(222, 52);
-            this.pdf.TabIndex = 11;
-            this.pdf.Text = "pdf";
-            this.pdf.UseVisualStyleBackColor = false;
-            // 
-            // csv
-            // 
-            this.csv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.csv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.csv.Location = new System.Drawing.Point(1481, 26);
-            this.csv.Name = "csv";
-            this.csv.Size = new System.Drawing.Size(222, 52);
-            this.csv.TabIndex = 13;
-            this.csv.Text = "csv";
-            this.csv.UseVisualStyleBackColor = false;
             // 
             // guna2Panel5
             // 
@@ -766,7 +726,6 @@
             this.Size = new System.Drawing.Size(1773, 763);
             this.guna2TabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel5.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -813,9 +772,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
-        private System.Windows.Forms.Button excell;
-        private System.Windows.Forms.Button pdf;
-        private System.Windows.Forms.Button csv;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
