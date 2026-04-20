@@ -44,6 +44,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.enter = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
@@ -67,9 +70,6 @@
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
-            this.enter = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.component_label1 = new e_commerce_NYC.Models.Component_label(this.components);
             this.component_label2 = new e_commerce_NYC.Models.Component_label(this.components);
             this.guna2Panel1.SuspendLayout();
@@ -79,6 +79,7 @@
             this.guna2Panel8.SuspendLayout();
             this.guna2Panel9.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
+            this.guna2Panel10.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -95,7 +96,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.guna2Panel5.SuspendLayout();
-            this.guna2Panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -150,11 +150,14 @@
             // 
             // guna2Panel8
             // 
+            this.guna2Panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel8.Controls.Add(this.label16);
-            this.guna2Panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel8.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel8.Location = new System.Drawing.Point(100, 3);
+            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(100, 3, 3, 3);
             this.guna2Panel8.Name = "guna2Panel8";
-            this.guna2Panel8.Size = new System.Drawing.Size(869, 258);
+            this.guna2Panel8.Size = new System.Drawing.Size(772, 258);
             this.guna2Panel8.TabIndex = 0;
             // 
             // label16
@@ -286,6 +289,46 @@
             this.maskedTextBox1.Size = new System.Drawing.Size(371, 39);
             this.maskedTextBox1.TabIndex = 15;
             this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            // 
+            // guna2Panel10
+            // 
+            this.guna2Panel10.Controls.Add(this.label1);
+            this.guna2Panel10.Controls.Add(this.enter);
+            this.guna2Panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel10.Location = new System.Drawing.Point(3, 619);
+            this.guna2Panel10.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
+            this.guna2Panel10.Name = "guna2Panel10";
+            this.guna2Panel10.Size = new System.Drawing.Size(869, 232);
+            this.guna2Panel10.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Power Grotesk Trial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(187, 146);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(502, 38);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Don\'t have an account? Register";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // enter
+            // 
+            this.enter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.enter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.enter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.enter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.enter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.enter.Font = new System.Drawing.Font("Power Grotesk Trial", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enter.ForeColor = System.Drawing.Color.White;
+            this.enter.Location = new System.Drawing.Point(194, 13);
+            this.enter.Margin = new System.Windows.Forms.Padding(200, 3, 200, 3);
+            this.enter.Name = "enter";
+            this.enter.Size = new System.Drawing.Size(475, 106);
+            this.enter.TabIndex = 25;
+            this.enter.Text = "Log in";
+            this.enter.Click += new System.EventHandler(this.enter_Click);
             // 
             // guna2Panel3
             // 
@@ -555,45 +598,6 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "Track your orders";
             // 
-            // guna2Panel10
-            // 
-            this.guna2Panel10.Controls.Add(this.label1);
-            this.guna2Panel10.Controls.Add(this.enter);
-            this.guna2Panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel10.Location = new System.Drawing.Point(3, 619);
-            this.guna2Panel10.Name = "guna2Panel10";
-            this.guna2Panel10.Size = new System.Drawing.Size(869, 259);
-            this.guna2Panel10.TabIndex = 2;
-            // 
-            // enter
-            // 
-            this.enter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.enter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.enter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.enter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.enter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.enter.Font = new System.Drawing.Font("Power Grotesk Trial", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enter.ForeColor = System.Drawing.Color.White;
-            this.enter.Location = new System.Drawing.Point(194, 13);
-            this.enter.Margin = new System.Windows.Forms.Padding(200, 3, 200, 3);
-            this.enter.Name = "enter";
-            this.enter.Size = new System.Drawing.Size(475, 106);
-            this.enter.TabIndex = 25;
-            this.enter.Text = "Log in";
-            this.enter.Click += new System.EventHandler(this.enter_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Power Grotesk Trial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(187, 146);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(502, 38);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Don\'t have an account? Register";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(29F, 58F);
@@ -617,6 +621,8 @@
             this.guna2Panel9.ResumeLayout(false);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
+            this.guna2Panel10.ResumeLayout(false);
+            this.guna2Panel10.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -637,8 +643,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
-            this.guna2Panel10.ResumeLayout(false);
-            this.guna2Panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }

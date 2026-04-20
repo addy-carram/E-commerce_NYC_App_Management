@@ -48,14 +48,14 @@ namespace e_commerce_NYC
 
                     cmd.Parameters.AddWithValue("@u", guna2TextBox1.Text);
 
-                    // 🔐 hash password
+                    //hash password
                     byte[] salt = HashHelper.GenerateSalt();
                     string hashedPassword = HashHelper.HashPassword(maskedTextBox1.Text, salt);
 
                     cmd.Parameters.AddWithValue("@p", hashedPassword);
                     cmd.Parameters.AddWithValue("@s", Convert.ToBase64String(salt));
 
-                    // 🧑‍💼 role din comboBox
+                    // role din comboBox
                     cmd.Parameters.AddWithValue("@r", guna2ComboBox1.SelectedItem.ToString());
 
                     conn.Open();
