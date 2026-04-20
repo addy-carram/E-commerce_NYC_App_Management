@@ -72,6 +72,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EUROPTICADataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EUROPTICADataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EUROPTICADataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EUROPTICADataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EUROPTICADataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EUROPTICADataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Role\HashHelper.cs" />
     <Compile Include="Role\DbConnection.cs" />
     <Compile Include="Order component\order_action_sql.cs" />
@@ -229,11 +244,11 @@
     <Compile Include="Role\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\UC_Money.cs">
+    <Compile Include="Reports\UC_Reports.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Reports\UC_Money.Designer.cs">
-      <DependentUpon>UC_Money.cs</DependentUpon>
+    <Compile Include="Reports\UC_Reports.Designer.cs">
+      <DependentUpon>UC_Reports.cs</DependentUpon>
     </Compile>
     <Compile Include="Order component\UC_Orders.cs">
       <SubType>UserControl</SubType>
@@ -289,7 +304,10 @@
     <EmbeddedResource Include="Patient component\uc_patient_add.resx">
       <DependentUpon>uc_patient_add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report_Orders.rdlc" />
+    <EmbeddedResource Include="Reports\Report_Employee.rdlc" />
+    <EmbeddedResource Include="Reports\Report_Orders.rdlc" />
+    <EmbeddedResource Include="Reports\Report_Patients.rdlc" />
+    <EmbeddedResource Include="Reports\Report_Products.rdlc" />
     <EmbeddedResource Include="Role\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,8 +360,8 @@
     <EmbeddedResource Include="Role\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\UC_Money.resx">
-      <DependentUpon>UC_Money.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\UC_Reports.resx">
+      <DependentUpon>UC_Reports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Order component\UC_Orders.resx">
       <DependentUpon>UC_Orders.cs</DependentUpon>
@@ -367,6 +385,39 @@
     </None>
     <None Include="EUROPTICADataSet.xss">
       <DependentUpon>EUROPTICADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EUROPTICADataSet1.xsc">
+      <DependentUpon>EUROPTICADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EUROPTICADataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EUROPTICADataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EUROPTICADataSet1.xss">
+      <DependentUpon>EUROPTICADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EUROPTICADataSet2.xsc">
+      <DependentUpon>EUROPTICADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="EUROPTICADataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EUROPTICADataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EUROPTICADataSet2.xss">
+      <DependentUpon>EUROPTICADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="EUROPTICADataSet3.xsc">
+      <DependentUpon>EUROPTICADataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="EUROPTICADataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EUROPTICADataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EUROPTICADataSet3.xss">
+      <DependentUpon>EUROPTICADataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

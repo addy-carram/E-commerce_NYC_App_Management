@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EUROPTICADataSet3" targetNamespace="http://tempuri.org/EUROPTICADataSet3.xsd" xmlns:mstns="http://tempuri.org/EUROPTICADataSet3.xsd" xmlns="http://tempuri.org/EUROPTICADataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="EUROPTICAConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="EUROPTICAConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.e_commerce_NYC.Properties.Settings.GlobalReference.Default.EUROPTICAConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Patients_PAYMENT_STATUSTableAdapter" GeneratorDataComponentClassName="Patients_PAYMENT_STATUSTableAdapter" Name="Patients_PAYMENT_STATUS" UserDataComponentName="Patients_PAYMENT_STATUSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="EUROPTICAConnectionString (Settings)" DbObjectName="EUROPTICA.dbo.Patients_PAYMENT_STATUS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_order, full_name, status_name, total_amount FROM dbo.Patients_PAYMENT_STATUS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_order" DataSetColumn="id_order" />
+              <Mapping SourceColumn="full_name" DataSetColumn="full_name" />
+              <Mapping SourceColumn="status_name" DataSetColumn="status_name" />
+              <Mapping SourceColumn="total_amount" DataSetColumn="total_amount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EUROPTICADataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="EUROPTICADataSet3" msprop:Generator_DataSetName="EUROPTICADataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Patients_PAYMENT_STATUS" msprop:Generator_RowEvHandlerName="Patients_PAYMENT_STATUSRowChangeEventHandler" msprop:Generator_RowDeletedName="Patients_PAYMENT_STATUSRowDeleted" msprop:Generator_RowDeletingName="Patients_PAYMENT_STATUSRowDeleting" msprop:Generator_RowEvArgName="Patients_PAYMENT_STATUSRowChangeEvent" msprop:Generator_TablePropName="Patients_PAYMENT_STATUS" msprop:Generator_RowChangedName="Patients_PAYMENT_STATUSRowChanged" msprop:Generator_RowChangingName="Patients_PAYMENT_STATUSRowChanging" msprop:Generator_TableClassName="Patients_PAYMENT_STATUSDataTable" msprop:Generator_RowClassName="Patients_PAYMENT_STATUSRow" msprop:Generator_TableVarName="tablePatients_PAYMENT_STATUS" msprop:Generator_UserTableName="Patients_PAYMENT_STATUS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_order" msprop:Generator_ColumnPropNameInRow="id_order" msprop:Generator_ColumnPropNameInTable="id_orderColumn" msprop:Generator_ColumnVarNameInTable="columnid_order" msprop:Generator_UserColumnName="id_order" type="xs:int" />
+              <xs:element name="full_name" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="full_name" msprop:Generator_ColumnPropNameInTable="full_nameColumn" msprop:Generator_ColumnVarNameInTable="columnfull_name" msprop:Generator_UserColumnName="full_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="201" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="status_name" msprop:Generator_ColumnPropNameInRow="status_name" msprop:Generator_ColumnPropNameInTable="status_nameColumn" msprop:Generator_ColumnVarNameInTable="columnstatus_name" msprop:Generator_UserColumnName="status_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="total_amount" msprop:Generator_ColumnPropNameInRow="total_amount" msprop:Generator_ColumnPropNameInTable="total_amountColumn" msprop:Generator_ColumnVarNameInTable="columntotal_amount" msprop:Generator_UserColumnName="total_amount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Patients_PAYMENT_STATUS" />
+      <xs:field xpath="mstns:id_order" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

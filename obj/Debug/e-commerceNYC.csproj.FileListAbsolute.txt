@@ -54,7 +54,8 @@ D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\pt\Microsoft.ReportViewer.WinForms.
 D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.csproj.AssemblyReference.cache
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerceNYC.csproj.AssemblyReference.cache
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.exe.config
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_order_add.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_order_delete.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_order_edit.resources
@@ -78,14 +79,13 @@ D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_delete.r
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_edit.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_edit_id.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.RegisterForm.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Reports.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Orders.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Patients.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Products.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Dashboard.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.csproj.GenerateResource.cache
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.csproj.CoreCompileInputs.cache
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commer.11CDE8D9.Up2Date
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerceNYC.csproj.GenerateResource.cache
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerceNYC.csproj.CoreCompileInputs.cache
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commer.58FC1029.Up2Date
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.exe
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.pdb
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.exe.config
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Reports.resources

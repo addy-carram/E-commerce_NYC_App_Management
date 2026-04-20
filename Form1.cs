@@ -186,5 +186,15 @@ namespace e_commerce_NYC
         {
 
         }
+
+        private void panel19_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel19_Click(object sender, EventArgs e)
+        {
+            ShowPage(new UC_Reports());
+        }
     }
 }

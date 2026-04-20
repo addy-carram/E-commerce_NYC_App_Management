@@ -212,6 +212,8 @@
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(323, 100);
             this.panel19.TabIndex = 17;
+            this.panel19.Click += new System.EventHandler(this.panel19_Click);
+            this.panel19.Paint += new System.Windows.Forms.PaintEventHandler(this.panel19_Paint);
             // 
             // label65
             // 
