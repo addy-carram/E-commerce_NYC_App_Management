@@ -181,5 +181,10 @@ namespace e_commerce_NYC
                 panel15.Visible = false;
             }
         }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

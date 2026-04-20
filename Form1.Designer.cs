@@ -223,9 +223,9 @@
             this.label65.Location = new System.Drawing.Point(111, 33);
             this.label65.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(85, 29);
+            this.label65.Size = new System.Drawing.Size(98, 29);
             this.label65.TabIndex = 14;
-            this.label65.Text = "Money";
+            this.label65.Text = "Reports";
             this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox28
@@ -571,6 +571,7 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1556, 100);
             this.guna2Panel1.TabIndex = 8;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // user
             // 

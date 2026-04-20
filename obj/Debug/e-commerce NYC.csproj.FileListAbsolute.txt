@@ -1,39 +1,90 @@
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\e-commerce NYC.exe.config
 D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\e-commerce NYC.exe
 D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\e-commerce NYC.pdb
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.csproj.AssemblyReference.cache
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Login.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Properties.Resources.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.csproj.GenerateResource.cache
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.csproj.CoreCompileInputs.cache
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.exe
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.pdb
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.exe.config
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.loginlabels.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Models.Component_label.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Form1.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Employee.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Orders.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Patients.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Products.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Dashboard.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Money.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_add.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_delete.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_edit.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_edit_id.resources
 D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\Guna.UI2.dll
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commer.11CDE8D9.Up2Date
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_patient_add.resources
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\EnvDTE.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\stdole.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.csproj.AssemblyReference.cache
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_order_add.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_order_delete.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_order_edit.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_order_edit_id.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Employee_component.uc_patient_delete.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Form1.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_add.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_patient_add.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Login.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Models.Component_label.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.loginlabels.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Patient_component.uc_patient_edit.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Patient_component.uc_patient_edit_id.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Products_components.uc_product_add.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Products_components.uc_product_delete.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Products_components.uc_product_edit_id.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Products_components.uc_product_edit.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_order_add.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_order_delete.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_order_edit_id.resources
-D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Order_component.uc_order_edit.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Products_components.uc_product_edit_id.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.Properties.Resources.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Employee.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_delete.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_edit.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.uc_employee_edit_id.resources
 D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.RegisterForm.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Money.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Orders.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Patients.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Products.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e_commerce_NYC.UC_Dashboard.resources
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.csproj.GenerateResource.cache
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.csproj.CoreCompileInputs.cache
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commer.11CDE8D9.Up2Date
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.exe
+D:\colegiu\anul3\c#\e-commerce NYC\obj\Debug\e-commerce NYC.pdb
